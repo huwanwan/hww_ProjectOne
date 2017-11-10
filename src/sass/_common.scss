@@ -1,0 +1,22 @@
+$listFont:12px;
+$listColor:#484848;
+
+.header{
+    height:24px;background-color:#F1F1F1;
+    %fl{font-size:$listFont;height:24px;line-height:24px;}
+    .aside li{@extend %fl;float:left;display:inline-block;margin:0px 5px 0px 7px;
+        a{@extend %fl;margin-left:7px}
+    }
+    .rightList{
+        .login li{@extend %fl;float:left;
+            a{padding:0px 10px;border-right:1px solid $listColor;}
+            &:last-child{
+                a{border:0 none;}
+            }
+        }
+        span{@extend %fl;color:#484848;}
+        .orders li{@extend %fl;float:left;
+            a{}
+        }
+    }
+}
