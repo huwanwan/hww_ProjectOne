@@ -5,31 +5,338 @@
     <title>commonHtml</title>
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <script type="text/javascript" src="../js/conmonHtml.js"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="container clearfix">
-            <ul class="aside clearfix fl">
-                <li class="glyphicon glyphicon-phone"><a href="http://app.newegg.cn">掌上新蛋</a></li>
-                <li class="glyphicon glyphicon-user"><a href="http://www.newegg.cn/Service/HelpCenter.aspx?sysno=30">企业团购</a></li>
+    <div class="head container clearfix">
+        <ul class="aside clearfix fl">
+            <li class="glyphicon glyphicon-phone"><a href="http://app.newegg.cn">掌上新蛋</a></li>
+            <li class="glyphicon glyphicon-user"><a href="http://www.newegg.cn/Service/HelpCenter.aspx?sysno=30">企业团购</a></li>
+        </ul>
+        <div class="rightList fr">
+            <ul class="fl login clearfix">
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登录</a></li>
             </ul>
-            <div class="rightList fr">
-                <ul class="fl login clearfix">
-                    <li><a href="#">注册</a></li>
-                    <li><a href="#">登录</a></li>
-                </ul>
-                <span class="fl">晚上好,欢迎来新蛋购物!</span>
-                <ul class="orders fl clearfix">
-                    <li><a href="#">我的订单</a></li>
-                    <li><a href="#">我的新蛋<i class="glyphicon glyphicon-chevron-down"></i></a></li>
-                    <li><a href="#">帮助中心</a></li>
-                    <li><a href="#">客户中心<i class="glyphicon glyphicon-chevron-down"></i></a></li>
-                </ul>
-            </div>
+            <span class="fl">晚上好,欢迎来新蛋购物!</span>
+            <ul class="orders fl clearfix">
+                <li><a href="#">我的订单</a></li>
+                <li class="myEgg">
+                    <a href="#">我的新蛋<i class="iconfont icon-jiantou"></i></a>
+                    <div class="tipLogin">
+                        请<a href="#">登录</a>后查看
+                    </div>
+                    <ul class="orderCont">
+                        <li>我的订单 : <span>0</span></li>
+                        <li>我的咨询 : <span>0</span></li>
+                        <li>我的蛋券 : <span>0</span></li>
+                        <li>我的评论 : <span>0</span></li>
+                        <li>我的积分 : <span>0</span></li>
+                        <li>我的礼品卡 : <span>0</span></li>
+                    </ul>
+                </li>
+                <li><a href="#">帮助中心</a></li>
+                <li class="customer">
+                    <a href="#">客户中心<i class="iconfont icon-jiantou"></i></a>
+                    <div class="phoneNum">
+                        <span>400-820-4400</span>
+                        <span>021-67072699</span>
+                        <span>每天 9:00 - 18:00</span>
+                        <button>在线咨询</button>
+                        <button>邮件我们</button>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="search">
-        <div class="container"></div>
+    <div class="navT container">
+        <h1 class="fl">新蛋</h1>
+        <div class="fl">
+            <div class="searchBox clearfix">
+                <input class="search" type="text" name="search" placeHolder="请输入您想要搜索的关键字" />
+                <button>搜索</button>
+            </div>
+            <ul class="clearfix">
+                <li><a href="#">智能硬件</a></li>
+                <li><a href="#">iPhone8</a></li>
+                <li><a href="#">mate9</a></li>
+                <li><a href="#">Thinkpad</a></li>
+                <li><a href="#">电视机</a></li>
+            </ul>
+        </div>
     </div>
+    <div class="navB container clearfix">
+        <h3 class="fl">全部商品分类<i class="iconfont icon-jiantou"></i>
+            <ul class="navSec hide">
+                <li>
+                    <i class="glyphicon glyphicon-plane"></i>
+                    <s class="glyphicon glyphicon-chevron-right"></s>
+                    <h4><a href="javascript:;">海外直购</a></h4>
+                    <div>
+                        <a class="hot" href="javascript:;">影音</a>
+                        <a class="hot" href="javascript:;">固态硬盘</a>
+                        <a href="javascript:;">奶粉</a>
+                    </div>
+                    <div class="navThird">
+                        <ul class="navLeft fl clearfix">
+                            <li>
+                                <h4>电脑整机</h4>
+                                <ul>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本配件</a></li>
+                                    <li><a href="#">平板配件</a></li>
+                                    <li><a href="#">平板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="fr">热门品牌</h3>
+                        <ul class="navRight fr">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-phone"></i>
+                    <s class="glyphicon glyphicon-chevron-right"></s>
+                    <h4><a href="javascript:;">手机</a><a href="javascript:;">摄影</a><a href="javascript:;">苹果</a></h4>
+                    <div>
+                        <a class="hot" href="javascript:;">智能手机</a>
+                        <a href="javascript:;">微单</a>
+                        <a class="hot" href="javascript:;">数码包</a>
+                    </div>
+                    <div class="navThird">
+                        <ul class="navLeft fl clearfix">
+                            <li>
+                                <h4>电脑整机</h4>
+                                <ul>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本配件</a></li>
+                                    <li><a href="#">平板配件</a></li>
+                                    <li><a href="#">平板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="fr">热门品牌</h3>
+                        <ul class="navRight fr">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-camera"></i>
+                    <s class="glyphicon glyphicon-chevron-right"></s>
+                    <h4><a href="javascript:;">电脑</a><a href="javascript:;">外设</a><a href="javascript:;">办公</a></h4>
+                    <div>
+                        <a class="hot" href="javascript:;">笔记本</a>
+                        <a class="hot" href="javascript:;">智能硬件</a>
+                        <a href="javascript:;">硬盘</a>
+                    </div>
+                    <div class="navThird">
+                        <ul class="navLeft fl clearfix">
+                            <li>
+                                <h4>电脑整机</h4>
+                                <ul>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本配件</a></li>
+                                    <li><a href="#">平板配件</a></li>
+                                    <li><a href="#">平板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="fr">热门品牌</h3>
+                        <ul class="navRight fr">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-home"></i>
+                    <s class="glyphicon glyphicon-chevron-right"></s>    
+                    <h4><a href="javascript:;">家用电器</a></h4>
+                    <div>
+                        <a href="javascript:;">电饭煲</a>
+                        <a class="hot" href="javascript:;">电视</a>
+                        <a href="javascript:;">净水器</a>
+                    </div>
+                    <div class="navThird">
+                        <ul class="navLeft fl clearfix">
+                            <li>
+                                <h4>电脑整机</h4>
+                                <ul>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本配件</a></li>
+                                    <li><a href="#">平板配件</a></li>
+                                    <li><a href="#">平板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="fr">热门品牌</h3>
+                        <ul class="navRight fr">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-cutlery"></i>
+                    <s class="glyphicon glyphicon-chevron-right"></s>
+                    <h4><a href="javascript:;">生活百货</a></h4>
+                    <div>
+                        <a class="hot" href="javascript:;">汽车用品</a>
+                        <a href="javascript:;">个户清洁</a>
+                    </div>
+                    <div>
+                        <a href="javascript:;">家居</a>
+                        <a href="javascript:;">厨用</a>
+                        <a href="javascript:;">钟表</a>
+                        <a href="javascript:;">礼品</a>
+                    </div>    
+                    <div>
+                        <a href="javascript:;">服饰</a>
+                        <a href="javascript:;">女装</a>
+                        <a href="javascript:;">内衣</a>
+                        <a href="javascript:;">珠宝</a>
+                    </div>    
+                    <div>
+                        <a href="javascript:;">母婴</a>
+                        <a href="javascript:;">玩具</a>
+                        <a href="javascript:;">食品</a>
+                        <a href="javascript:;">酒饮</a>
+                    </div>    
+                    <div>
+                        <a href="javascript:;">鞋靴</a>
+                        <a href="javascript:;">箱包</a>
+                        <a href="javascript:;">运动</a>
+                        <a href="javascript:;">户外</a>
+                    </div>
+                    <div class="navThird">
+                        <ul class="navLeft fl clearfix">
+                            <li>
+                                <h4>电脑整机</h4>
+                                <ul>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本配件</a></li>
+                                    <li><a href="#">平板配件</a></li>
+                                    <li><a href="#">平板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="fr">热门品牌</h3>
+                        <ul class="navRight fr">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </h3>
+        <ul class="navList fl">
+            <li>首页</li>
+            <li>限时抢购</li>
+            <li>团团赚</li>
+            <li>海外直购</li>
+            <li>智能硬件</li>
+            <li>爱车配</li>
+            <li>二手宝库</li>
+        </ul>
+        <ul class="cartTips fr">
+            <li><span>购物车<s>0</s>件</span><i class="iconfont icon-jiantou"></i>
+                <p class="hide">您还没有购买商品,快去挑选吧!</p>
+            </li>
+            <li><span>收藏提醒</span><i class="iconfont icon-jiantou"></i>
+                <p class="hide">请<button>登录</button>后查看</p>
+            </li>
+        </ul>
+    </div>
+    <div class="mylink container clearfix">
+        <div>
+            <h3><s class="glyphicon glyphicon-user"></s>新手上路</h3>
+            <ul>
+                <li><i></i><a href="javascript:;"title="怎样购物">怎样购物</a></li>
+                <li><i></i><a href="javascript:;"title="支付常见问题">支付常见问题</a></li>
+                <li><i></i><a href="javascript:;"title="免运费政策">免运费政策</a></li>
+                <li><i></i><a href="javascript:;"title="发票须知">发票须知</a></li>
+                <li><i></i><a href="javascript:;"title="签收验货流程">签收验货流程</a></li>
+                <li><i></i><a href="javascript:;"title="用户评论/咨询">用户评论/咨询</a></li>
+                <li><i></i><a href="javascript:;"title="大件商品订购流程">大件商品订购流程</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3><s class="glyphicon glyphicon-user"></s>售后服务</h3>
+            <ul>
+                <li><i></i><a href="javascript:;"title="退换货政策">退换货政策</a></li>
+                <li><i></i><a href="javascript:;"title="订单查询">订单查询</a></li>
+                <li><i></i><a href="javascript:;"title="售后申请">售后申请</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3><s class="glyphicon glyphicon-user"></s>特色服务</h3>
+            <ul>
+                <li><i></i><a href="javascript:;"title="关于会员制">关于会员制</a></li>
+                <li><i></i><a href="javascript:;"title="价格保护">价格保护</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3><s class="glyphicon glyphicon-user"></s>申请合作</h3>
+            <ul>
+                <li><i></i><a href="javascript:;"title="申请成为供应商">申请成为供应商</a></li>
+                <li><i></i><a href="javascript:;"title="申请入驻开放平台">申请入驻开放平台</a></li>
+                <li><i></i><a href="javascript:;"title="友情合作">友情合作</a></li>
+                <li><i></i><a href="javascript:;"title="网站联盟">网站联盟</a></li>
+                <li><i></i><a href="javascript:;"title="企业客户">企业客户</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3><s class="glyphicon glyphicon-user"></s>关于我们</h3>
+            <ul>
+                <li><i></i><a href="javascript:;"title="新蛋集团">新蛋集团</a></li>
+                <li><i></i><a href="javascript:;"title="联系我们">联系我们</a></li>
+                <li><i></i><a href="javascript:;"title="诚聘英才">诚聘英才</a></li>
+                <li><i></i><a href="javascript:;"title="发票须知">发票须知</a></li>
+            </ul>
+        </div>
+    </div>    
+
+
+    <div class="foot container">
+        <ul class="picLink clearfix">
+            <li><a href="javascript:;" style="width:123px;background:url('../img/certi20150925.png') no-repeat 0px 0px"></a></li>
+            <li><a href="javascript:;" style="width:126px;background:url('../img/certi20150925.png') no-repeat 0px -46px;"></a></li>
+            <li><a href="javascript:;" style="width:116px;background:url('../img/certi20150925.png') no-repeat 0px -92px;"></a></li>
+            <li><a href="javascript:;" style="width:129px;background:url('../img/certi20150925.png') no-repeat 0px -139px;"></a></li>
+            <li><a href="javascript:;" style="width:154px;background:url('../img/certi20150925.png') no-repeat 0px -185px;"></a></li>
+        </ul>
+        <p class="blogroll">新蛋集团网站： <a href="http://www.newegg.com/">美国新蛋</a><a href="http://www.newegg.cn/">中国新蛋</a><a href="https://www.newegg.ca/">加拿大新蛋</a><a href="http://www.neweggsoft.com/">新蛋软件</a></p>
+        <p class="info">© 2001-2017 新蛋商贸（上海）有限公司 版权所有 <a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=4lOpugsxLRJc4MASCWvqyMnUHuIt2ast6Mgp7uJHjvl4b-2AE_qO!-147090520"></a>沪ICP备:16033615</p>
+    </div>
+
 </body>
 </html>
