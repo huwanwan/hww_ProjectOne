@@ -1,13 +1,7 @@
-/* 
-* @Author: Marte
-* @Date:   2017-11-10 16:54:09
-* @Last Modified by:   Marte
-* @Last Modified time: 2017-11-11 18:10:47
-*/
 (function(){
     jQuery(function($){
         // load(url,[data],[callback]) 载入远程 HTML 文件代码并插入页面中。
-        $('#header').load('../html/commonHtml.html .head',function(){
+        $('#header').load('http://localhost:9393/html/commonHtml.html .head',function(){
             $(this).find('.orders').on('mouseenter','li',function(){
                 $(this).find('div').css({
                                         'display':'block',
@@ -17,7 +11,7 @@
                 $(this).find('div').css('display','none');
             })
         });
-        $('#navTop').load('../html/commonHtml.html .navT',function(){
+        $('#navTop').load('http://localhost:9393/html/commonHtml.html .navT',function(){
             $(this).find('.search').focus(function(){
                 $(this).attr('placeHolder','');
             }).blur(function(){
@@ -48,7 +42,7 @@
                 })
             })
         });
-        $('#navBtm').load('../html/commonHtml.html .navB',function(){
+        $('#navBtm').load('http://localhost:9393/html/commonHtml.html .navB',function(){
             var timer;
             $(this).find('.navSec').removeClass('hide');
             $(this).find('.navList').on('mouseenter','li',function(){
@@ -62,7 +56,10 @@
             }).on('mouseleave','li',function(){
                 $(this).find('p').addClass('hide');
             })
+            var disTop;
             $('.navSec').on('mouseenter','li',function(){
+                disTop = $(this).find('.navThird').position().top;
+                console.log(disTop)
                 var setTop = ($(this).parents('.navSec').position().top)-$(this).outerHeight();
                 timer = setTimeout(()=>{
                     $(this).siblings().css('backgroundColor','#F2F2F2');
@@ -71,9 +68,11 @@
             }).on('mouseleave','li',function(){
                     $(this).siblings().css('backgroundColor','');
                     clearTimeout(timer);
-                    $(this).find('.navThird').css('display','none');
+                    $(this).find('.navThird').css({'display':'none',
+                                                    'top':0    
+                                                });
             })
         });
-        
+
     });
 })();
