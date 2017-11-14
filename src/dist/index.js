@@ -3,7 +3,7 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-14 10:10:07
+* @Last Modified time: 2017-11-14 12:29:21
 */
 (function(){
     jQuery(function($){
@@ -1270,5 +1270,8 @@
         var computer = new CommonArea(cmpData)
         var homeApp = new CommonArea(homeAppliance);
         var lifeStyle = new CommonArea(lifeUser);
+        $('#myLinks').load('../html/commonHtml.html .mylink'); 
+        $('#footer').load('../html/commonHtml.html .foot');
+        
     });
 })();

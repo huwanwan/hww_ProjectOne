@@ -128,7 +128,7 @@ $borderStyle:1px solid #E2E2E2;
     .navList>li{width:(627/7)+px;line-height:40px;color:#fff;text-align:center;font-size:$listFont;}
     .cartTips{
         li{@extend %pos;text-align:center;padding-top:10px;border:$border;position:relative;
-            %p{width:230px;height:85px;line-height:85px;color:#BBBBBB;border:$border;border-top:0 none;position:absolute;top:39px;}
+            %p{width:230px;height:85px;line-height:85px;color:#BBBBBB;border:$border;border-top:0 none;position:absolute;top:39px;z-index:5;background-color: #fff;}
             &:first-child{width:117px;
                 span{border-right:$borderStyle;
                     s{margin:0px 7px; font-weight:bold;color:#FF993E;}
