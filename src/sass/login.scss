@@ -1,0 +1,139 @@
+// mian部分
+$border:1px solid #CCCCCC;
+#userMain{
+    background-color: #E3E3E3;
+    .container{
+        width:980px;
+        padding:42px 0px 44px 34px;
+        >a{
+            float:left;
+            img{
+                margin-right:105px;
+            }
+        }
+        .loginArea{
+            width:363px;
+            height:398px;
+            padding:0px 23px 0px 29px;
+            border:$border;
+            background-color: #fff;
+            .getMation{
+                width:308px;
+                height:235px;
+                .formTips{
+                    height:64px;
+                    padding-top:22px;
+                    h3{
+                        font-size:20px;
+                        color:#333;
+                        line-height:20px;
+                    }
+                    a{
+                        color:#003399;
+                    }
+                }
+                .logInp{
+                    height:115px;
+                    padding:0px 13px;
+                    span{
+                        display:block;
+                        height:34px;
+                        margin-bottom:24px;
+                        overflow:hidden;
+                        i{
+                            float:left;
+                            width:29px;
+                            height:34px;
+                            font-size:22px;
+                            line-height:34px;
+                            text-align:center;
+                            background-color:#CFCFCF;
+                            color:#fff;
+                            margin-right:1px;
+                            border-radius:2px;
+                        }
+                        input{
+                            margin-top:1px;
+                            width:252px;
+                            height:33px;
+                            border:$border;
+                            float:left;
+                            padding-left:5px;
+                            line-height:32px;
+                            color:#CFCFCF;
+                        }
+                    }
+                }
+                .forgetPsd{
+                    height:16px;
+                    line-height:16px;
+                    padding:0 13px;
+                    overflow:hidden;
+                    a{
+                        
+                        color:#003399;
+                        float:left;
+                        &:last-child{
+                            float:right;
+                        }
+                    }
+                }
+                .loginBtn{
+                    margin:9px 13px 0px;
+                    width:282px;
+                    height:32px;
+                    background-color: #F7661F;
+                    color:#fff;
+                    font-weight:bold;
+                    line-height:32px;
+                    text-align:center;
+                    border-radius:5px;
+                }
+            }
+            .otherLink{
+                margin-top:22px;
+                p{
+                    height:30px;
+                    line-height:30px;
+                }
+                .links{
+                    li{
+                        float:left;
+                        height:30px;
+                        padding-left:20px;
+                        background:url('../img/otherLoginIcon20140616.gif') no-repeat 0 0;
+                        a{
+                            line-height:30px;
+                            margin:0px 5px;
+                        }
+                        &:nth-child(-n+4){
+                            padding-left:30px;
+                            background:url('../img/4link.png') no-repeat 0 0;
+                        }
+                        &:nth-child(2){
+                            background-position:0 -46px;
+                        }
+                        &:nth-child(3){
+                            background-position:0 -98px;
+                        }
+                        &:nth-child(4){
+                            background-position:0 -161px;
+                        }
+                        &:nth-child(5){
+                            background-position:0 -2575px;
+                        }
+                        &:nth-child(6){
+                            background-position:0 -2609px;
+                        }
+                        &:nth-child(7){
+                            background-position:0 -2510px;
+                        }
+                        &:nth-child(8){
+                            background-position:0 -2648px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

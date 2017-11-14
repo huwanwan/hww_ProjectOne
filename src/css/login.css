@@ -1,0 +1,162 @@
+#userMain {
+  background-color: #E3E3E3;
+}
+
+#userMain .container {
+  width: 980px;
+  padding: 42px 0px 44px 34px;
+}
+
+#userMain .container > a {
+  float: left;
+}
+
+#userMain .container > a img {
+  margin-right: 105px;
+}
+
+#userMain .container .loginArea {
+  width: 363px;
+  height: 398px;
+  padding: 0px 23px 0px 29px;
+  border: 1px solid #CCCCCC;
+  background-color: #fff;
+}
+
+#userMain .container .loginArea .getMation {
+  width: 308px;
+  height: 235px;
+}
+
+#userMain .container .loginArea .getMation .formTips {
+  height: 64px;
+  padding-top: 22px;
+}
+
+#userMain .container .loginArea .getMation .formTips h3 {
+  font-size: 20px;
+  color: #333;
+  line-height: 20px;
+}
+
+#userMain .container .loginArea .getMation .formTips a {
+  color: #003399;
+}
+
+#userMain .container .loginArea .getMation .logInp {
+  height: 115px;
+  padding: 0px 13px;
+}
+
+#userMain .container .loginArea .getMation .logInp span {
+  display: block;
+  height: 34px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+#userMain .container .loginArea .getMation .logInp span i {
+  float: left;
+  width: 29px;
+  height: 34px;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #CFCFCF;
+  color: #fff;
+  margin-right: 1px;
+  border-radius: 2px;
+}
+
+#userMain .container .loginArea .getMation .logInp span input {
+  margin-top: 1px;
+  width: 252px;
+  height: 33px;
+  border: 1px solid #CCCCCC;
+  float: left;
+  padding-left: 5px;
+  line-height: 32px;
+  color: #CFCFCF;
+}
+
+#userMain .container .loginArea .getMation .forgetPsd {
+  height: 16px;
+  line-height: 16px;
+  padding: 0 13px;
+  overflow: hidden;
+}
+
+#userMain .container .loginArea .getMation .forgetPsd a {
+  color: #003399;
+  float: left;
+}
+
+#userMain .container .loginArea .getMation .forgetPsd a:last-child {
+  float: right;
+}
+
+#userMain .container .loginArea .getMation .loginBtn {
+  margin: 9px 13px 0px;
+  width: 282px;
+  height: 32px;
+  background-color: #F7661F;
+  color: #fff;
+  font-weight: bold;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#userMain .container .loginArea .otherLink {
+  margin-top: 22px;
+}
+
+#userMain .container .loginArea .otherLink p {
+  height: 30px;
+  line-height: 30px;
+}
+
+#userMain .container .loginArea .otherLink .links li {
+  float: left;
+  height: 30px;
+  padding-left: 20px;
+  background: url("../img/otherLoginIcon20140616.gif") no-repeat 0 0;
+}
+
+#userMain .container .loginArea .otherLink .links li a {
+  line-height: 30px;
+  margin: 0px 5px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(-n+4) {
+  padding-left: 30px;
+  background: url("../img/4link.png") no-repeat 0 0;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(2) {
+  background-position: 0 -46px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(3) {
+  background-position: 0 -98px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(4) {
+  background-position: 0 -161px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(5) {
+  background-position: 0 -2575px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(6) {
+  background-position: 0 -2609px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(7) {
+  background-position: 0 -2510px;
+}
+
+#userMain .container .loginArea .otherLink .links li:nth-child(8) {
+  background-position: 0 -2648px;
+}

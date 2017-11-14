@@ -1,10 +1,3 @@
-
-/* 
-* @Author: Marte
-* @Date:   2017-11-10 16:54:09
-* @Last Modified by:   Marte
-* @Last Modified time: 2017-11-14 12:29:21
-*/
 (function(){
     jQuery(function($){
         // load(url,[data],[callback]) 载入远程 HTML 文件代码并插入页面中。
@@ -63,7 +56,10 @@
             }).on('mouseleave','li',function(){
                 $(this).find('p').addClass('hide');
             })
+            var disTop;
             $('.navSec').on('mouseenter','li',function(){
+                disTop = $(this).find('.navThird').position().top;
+                console.log(disTop)
                 var setTop = ($(this).parents('.navSec').position().top)-$(this).outerHeight();
                 timer = setTimeout(()=>{
                     $(this).siblings().css('backgroundColor','#F2F2F2');
@@ -77,6 +73,29 @@
                                                 });
             })
         });
+        $('#userHead').load('http://localhost:9393/html/commonHtml.html .userH',function(){
+            $(this).find('.orders').on('mouseenter','li',function(){
+                $(this).find('div').css({
+                                        'display':'block',
+                                        'z-index':2
+                                    })
+            }).on('mouseleave','li',function(){
+                $(this).find('div').css('display','none');
+            })
+        });
+        $('#myLinks').load('../html/commonHtml.html .mylink'); 
+        $('#footer').load('../html/commonHtml.html .foot');
+    });
+})();
+
+/* 
+* @Author: Marte
+* @Date:   2017-11-10 16:54:09
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-11-14 16:51:35
+*/
+(function(){
+    jQuery(function($){
         //main的轮播图; 
         $('.carousel').hwCarousel({
             width:771,
@@ -800,19 +819,19 @@
                         var $boxList = $('<div/>').addClass('goodsBox fl');
                         if(arr.oldPrice!== undefined && arr.icon!== undefined){
                             $boxList[0].innerHTML = `
-                                <a href="${arr.href}" alt="">
+                                <a href="${arr.href}" >
                                     <img src="${arr.url[i]}" />
                                 </a>
-                                <p><i style="background:url('${arr.icon}');"></i>${arr.cont[0]}</p>
+                                <p><a href="${arr.href}"><i style="background:url('${arr.icon}');"></i>${arr.cont[0]}</a></p>
                                 <span><em>￥${arr.oldPrice[i]}</em>￥${arr.newPrice[i]}</span>
                                 <img class="hotIcon" src="${arr.hot[i]}" alt="" />
                             `;
                         }else{
                             $boxList[0].innerHTML = `
-                                <a href="${arr.href}" alt="">
+                                <a href="${arr.href}">
                                     <img src="${arr.url[i]}" />
                                 </a>
-                                <p>${arr.cont[0]}</p>
+                                <p><a href="${arr.href}">${arr.cont[0]}</a></p>
                                 <span>￥${arr.newPrice[i]}</span>
                                 <img class="hotIcon" src="${arr.hot[i]}" alt="" />
                             `;
@@ -1270,8 +1289,7 @@
         var computer = new CommonArea(cmpData)
         var homeApp = new CommonArea(homeAppliance);
         var lifeStyle = new CommonArea(lifeUser);
-        $('#myLinks').load('../html/commonHtml.html .mylink'); 
-        $('#footer').load('../html/commonHtml.html .foot');
+        
         
     });
 })();

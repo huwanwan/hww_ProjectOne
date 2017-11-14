@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/hwCarousel/hwCarousel.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/register.css" />
+</head>
+<body>
+    <div id="userHead"></div>
+    <div id="welcomeArea"></div>
+    <div id="regMain">
+        <div class="container">
+            <p class="getLogin">
+                已是新蛋会员 现在<a href="./login.html">登录</a>
+            </p>
+            <div class="regStep"></div>
+            <div class="regCont">
+                <div class="step1 ">
+                    <p>
+                        <label for="phoneNum">手机号码:</label>
+                        <input id="phoneNum" type="text"  />
+                        <i class="glyphicon glyphicon-ok-circle hide"></i>
+                        <i class="hide glyphicon glyphicon-remove-sign">请输入正确的手机号码</i>
+                    </p>
+                    <p>
+                        <label for="code">图形验证码:</label>
+                        <input id="code" type="text"  />
+                        <span></span>
+                        <a href="javascript:;">看不清楚?换一张</a><br/>
+                    </p>
+                    <p class="notOk hide"><i class="glyphicon glyphicon-remove-sign">请输入正确的验证码</i></p>
+                    <button>获取短信验证码</button>
+                    <p class="mail hide"><label for="mailCode">短信验证码:</label>
+                        <input id="mailCode" type="text"  />
+                        <span class="hide">获取短信验证码</span>
+                        <i class="glyphicon glyphicon-remove-sign hide">已发送一条动态验证码短信，请查收。</i>
+                    </p>
+                    <button class="next hide">下一步</button>
+                </div>
+                <div class="step2 hide">
+                    <p>
+                        <label for="logPsd">登录密码:</label>
+                        <input id="logPsd" type="password"  />
+                        <i class="glyphicon glyphicon-ok-circle hide"></i>
+                        <span class="pos hide"><i class="glyphicon glyphicon-remove-sign"></i>密码要求为8-16位的数字、英文字母、特殊符号中至少两种类型以上的组合</span>
+                        
+                    </p>
+                    <p>
+                        <label for="code">确认密码:</label>
+                        <input id="code" type="text"  /><i class="glyphicon glyphicon-ok-circle hide"></i>
+                        <span class="pos hide"><i class="glyphicon glyphicon-remove-sign"></i></span>
+                    </p>
+                    <p class="check"><input type="checkbox" />我已阅读同意<a href="#">《新蛋用户注册协议》</a></p>
+                    <button>注册</button>
+                </div>
+                <div class="step3 hide">
+                    <p><i class="glyphicon glyphicon-ok-circle"></i>恭喜,您已成功注册中国新蛋网。</p>
+                    <a href="../index.html">开始购物></a>
+                    <a href="javascript:;">完善个人信息></a>
+                    <span>验证邮箱可以帮您快速找回密码，并可以接受优惠信息，促销活动，降价提醒等消息。</span>
+                    <div class="addEmail">
+                        <i class="glyphicon glyphicon-envelope"></i><span>绑定邮箱</span>
+                        <input type="text" />
+                        <button>确定</button>
+                    </div>
+                    <img class="code" src="../img/code.jpg" height="192" width="167" alt="" />
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../dist/register.js"></script>
+</body>
+</html>

@@ -1,7 +1,10 @@
+@import './_base.scss';
+@import './_reset.scss';
+// 样式部分
 $listFont:12px;
 $listColor:#484848;
 $borderStyle:1px solid #E2E2E2;
-#header{
+%head{
     height:24px;background-color:#F1F1F1;border-bottom:$borderStyle;
     %fl{font-size:$listFont;height:24px;line-height:24px;}
     .aside li{@extend %fl;float:left;display:inline-block;margin:0px 5px 0px 7px;
@@ -16,13 +19,13 @@ $borderStyle:1px solid #E2E2E2;
         }
         span{@extend %fl;color:#484848;margin-right:18px;}
         .orders li{@extend %fl;float:left;padding:0px 5px;position:relative;
-                &.myEgg,&.customer{width:84px;line-height:$listFont;padding:6px $listFont 0px 11px;position:relative;transition:all 3s;
+                &.myEgg,&.customer{width:84px;line-height:$listFont;padding:6px $listFont 0px 11px;position:relative;
                     i{position:absolute;left:60px;transform:rotate(180deg);}
                     &:hover{background-color: #fff;
                         i{transform:rotate(0deg);}
                     }
                 }
-                %pos{width:118px;border:$borderStyle;border-top:0 none;background-color: #fff;position:absolute;top:24px;right:1px;display:none;}
+                %pos{width:118px;border:$borderStyle;border-top:0 none;background-color: #fff;position:absolute;top:24px;right:-1px;display:none;}
                 .tipLogin{@extend %pos;height:34px;line-height:34px;padding-left:18px;
                     a{margin:0px 5px;color:#003399;text-decoration:underline;}
                 }
@@ -50,6 +53,9 @@ $borderStyle:1px solid #E2E2E2;
                 }
         }
     }
+}
+#header{
+    @extend %head;
 }
 
 #navTop{
@@ -225,6 +231,34 @@ $borderStyle:1px solid #E2E2E2;
         }
         .info{
             @extend %pStyle;
+        }
+    }
+}
+// 登录注册头部;
+#userHead{
+    @extend %head;
+    .container{padding:0px 110px;}
+}
+// 登录注册头部;
+#welcomeArea{
+    height:108px;
+    .container{
+        width:980px;
+        h1{width:319px;
+           height:65px;
+           margin-top:22px;
+           text-indent:-10000px;
+           background:url('../img/logocn_1213.png') no-repeat;
+           margin-right:25px;
+        }
+        h2{
+            margin-top:28px;
+            height:48px;
+            line-height:48px;
+            font-size:24px;
+            font-weight:bold;
+            border-left:1px solid #D9D9D9;
+            padding-left:27px;
         }
     }
 }

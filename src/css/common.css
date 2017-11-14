@@ -1,0 +1,732 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  min-width: 1205px;
+}
+
+.clearfix:after {
+  /*清楚浮动*/
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+  zoom: 1;
+}
+
+a:hover {
+  color: #484848;
+}
+
+/*公共类*/
+.container {
+  /*版心 提取 */
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+/*字体图标*/
+@font-face {
+  font-family: "iconfont";
+  src: url("../font/iconfont.eot?t=1510314678361");
+  /* IE9*/
+  src: url("iconfont.eot?t=1510314678361#iefix") format("embedded-opentype"), url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAUAAAsAAAAAB1gAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kbxY21hcAAAAYAAAABdAAABhpVUBr5nbHlmAAAB4AAAATIAAAFAi58xRWhlYWQAAAMUAAAALwAAADYPdqtiaGhlYQAAA0QAAAAcAAAAJAfeA4RobXR4AAADYAAAAAwAAAAMC+kAAGxvY2EAAANsAAAACAAAAAgAdgCgbWF4cAAAA3QAAAAfAAAAIAESAF1uYW1lAAADlAAAAUUAAAJtPlT+fXBvc3QAAATcAAAAJAAAADXf7FB7eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sE4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDxlZ27438AQw9zA0AAUZgTJAQAjzQxyeJzFkMENgDAMAy9taSXEIDwYiBdzdOHOUUwoDyaoJceKYylRgAWI4iEmsAvjwSnX3I+s7ifPZKkRqK30rv5TRTTLrkElMw02b/Ufm9d9dPoKdVAntvKScANcSwunAAAAeJwdj79OwkAcx+93R6+9Ci3c9e9BgbbS06AYamUxwuKicTBxYvQBdGVxYDFxcPAZjIkvwWziyAM4EJ14CLDhm28+y2f5fpGG0HZFFiRAAh2gIbpEtwgB7UNi4QhiVQxwH9xYc33HIipVsZ4mA3IBfkIdLx8VmU91aoMFbTiN85EaYAVnxRifQ+5FAGFT3vFei5M3MAPVft5c43dwO2nLHh9vro4mTt4VxqzKecj5q0E1zcC4Ylvw4HtMYybdfGi2dBedQ9yBaqjkzbTWbfL7l+Ix6vkMYD4H0exan5OGbJR9kp7goV6vGYGspfsOzP72AlGNsl9UBu+wxR5ykVe+TFRWTqdtGE3AL1mcQKaG2AJgjv7DQEj29W2GDluRCq5DhehrMxRgLpc7t8YY/QMFUy6BAAB4nGNgZGBgAOK20mPM8fw2Xxm4WRhA4Jr25m0I+v9DFgZmCSCXg4EJJAoAJ5cKUgB4nGNgZGBgbvjfwBDDwgACQJKRARUwAwBHCQJsBAAAAAPpAAAEAAAAAAAAAAB2AKB4nGNgZGBgYGYIZGBlAAEmIOYCQgaG/2A+AwAQ9wFwAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgJmRiZGZkYWBsYI9KzMxryS/lIEBABpmA5Y=") format("woff"), url("../font/iconfont.ttf?t=1510314678361") format("truetype"), url("../font/iconfont.svg?t=1510314678361#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiantou:before {
+  content: "\e507";
+}
+
+/*css 初始化 */
+* {
+  box-sizing: border-box;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset, img, input, button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+ul, ol {
+  list-style: none;
+}
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun","宋体";
+}
+
+select, input {
+  vertical-align: middle;
+}
+
+select, input, textarea {
+  font-size: 12px;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+/*防止拖动*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table {
+  border-collapse: collapse;
+}
+
+body {
+  font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+  color: #666;
+  background: #fff;
+}
+
+a {
+  color: #484848;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s, i, em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+#header, #userHead {
+  height: 24px;
+  background-color: #F1F1F1;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+#header .aside li, #userHead .aside li, #header .aside li a, #userHead .aside li a, #header .rightList .login li, #userHead .rightList .login li, #header .rightList span, #userHead .rightList span, #header .rightList .orders li, #userHead .rightList .orders li {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+}
+
+#header .aside li, #userHead .aside li {
+  float: left;
+  display: inline-block;
+  margin: 0px 5px 0px 7px;
+}
+
+#header .aside li a, #userHead .aside li a {
+  margin-left: 7px;
+}
+
+#header .rightList .login li, #userHead .rightList .login li {
+  float: left;
+}
+
+#header .rightList .login li a, #userHead .rightList .login li a {
+  padding: 0px 10px;
+  border-right: 1px solid #484848;
+}
+
+#header .rightList .login li:last-child a, #userHead .rightList .login li:last-child a {
+  border: 0 none;
+}
+
+#header .rightList span, #userHead .rightList span {
+  color: #484848;
+  margin-right: 18px;
+}
+
+#header .rightList .orders li, #userHead .rightList .orders li {
+  float: left;
+  padding: 0px 5px;
+  position: relative;
+}
+
+#header .rightList .orders li.myEgg, #userHead .rightList .orders li.myEgg, #header .rightList .orders li.customer, #userHead .rightList .orders li.customer {
+  width: 84px;
+  line-height: 12px;
+  padding: 6px 12px 0px 11px;
+  position: relative;
+}
+
+#header .rightList .orders li.myEgg i, #userHead .rightList .orders li.myEgg i, #header .rightList .orders li.customer i, #userHead .rightList .orders li.customer i {
+  position: absolute;
+  left: 60px;
+  transform: rotate(180deg);
+}
+
+#header .rightList .orders li.myEgg:hover, #userHead .rightList .orders li.myEgg:hover, #header .rightList .orders li.customer:hover, #userHead .rightList .orders li.customer:hover {
+  background-color: #fff;
+}
+
+#header .rightList .orders li.myEgg:hover i, #userHead .rightList .orders li.myEgg:hover i, #header .rightList .orders li.customer:hover i, #userHead .rightList .orders li.customer:hover i {
+  transform: rotate(0deg);
+}
+
+#header .rightList .orders li .tipLogin, #userHead .rightList .orders li .tipLogin, #header .rightList .orders li .orderCont, #userHead .rightList .orders li .orderCont, #header .rightList .orders li .phoneNum, #userHead .rightList .orders li .phoneNum, #header .rightList .orders li #navBtm h3, #navBtm #header .rightList .orders li h3, #userHead .rightList .orders li #navBtm h3, #navBtm #userHead .rightList .orders li h3, #header .rightList .orders li #navBtm .cartTips li, #navBtm .cartTips #header .rightList .orders li li, #userHead .rightList .orders li #navBtm .cartTips li, #navBtm .cartTips #userHead .rightList .orders li li {
+  width: 118px;
+  border: 1px solid #E2E2E2;
+  border-top: 0 none;
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  right: -1px;
+  display: none;
+}
+
+#header .rightList .orders li .tipLogin, #userHead .rightList .orders li .tipLogin {
+  height: 34px;
+  line-height: 34px;
+  padding-left: 18px;
+}
+
+#header .rightList .orders li .tipLogin a, #userHead .rightList .orders li .tipLogin a {
+  margin: 0px 5px;
+  color: #003399;
+  text-decoration: underline;
+}
+
+#header .rightList .orders li .orderCont, #userHead .rightList .orders li .orderCont {
+  padding-left: 10px;
+}
+
+#header .rightList .orders li .orderCont li, #userHead .rightList .orders li .orderCont li {
+  height: 24px;
+  line-height: 24px;
+}
+
+#header .rightList .orders li .phoneNum, #userHead .rightList .orders li .phoneNum {
+  width: 146px;
+  padding: 6px 10px 6px 10px;
+}
+
+#header .rightList .orders li .phoneNum span, #userHead .rightList .orders li .phoneNum span {
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+#header .rightList .orders li .phoneNum span:nth-child(1), #userHead .rightList .orders li .phoneNum span:nth-child(1) {
+  font-weight: bold;
+  color: #FE7B23;
+}
+
+#header .rightList .orders li .phoneNum span:nth-child(2), #userHead .rightList .orders li .phoneNum span:nth-child(2) {
+  font-weight: bold;
+  color: #484848;
+}
+
+#header .rightList .orders li .phoneNum button, #userHead .rightList .orders li .phoneNum button {
+  width: 60px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #4F9EE7;
+  text-align: center;
+}
+
+#header .rightList .orders li .phoneNum button:nth-child(1), #userHead .rightList .orders li .phoneNum button:nth-child(1) {
+  margin-right: 4px;
+}
+
+#navTop {
+  height: 86px;
+}
+
+#navTop h1 {
+  width: 319px;
+  height: 65px;
+  margin: 10px 46px 0px 0px;
+  text-indent: -10000px;
+  background: url("../img/logocn_1213.png") no-repeat;
+}
+
+#navTop .searchBox {
+  margin-top: 18px;
+  height: 34px;
+  margin-bottom: 9px;
+}
+
+#navTop .searchBox input {
+  float: left;
+  width: 336px;
+  height: 34px;
+  border: 2px solid #FF6600;
+  line-height: 32px;
+  padding-left: 6px;
+}
+
+#navTop .searchBox button {
+  float: left;
+  width: 98px;
+  height: 34px;
+  background-color: #FF6600;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#navTop div li {
+  float: left;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0px 17px;
+  border-right: 1px solid #E2E2E2;
+}
+
+#navTop div li:nth-child(1) {
+  padding-left: 6px;
+}
+
+#navTop div li:last-child {
+  border: 0 none;
+}
+
+#navBtm {
+  background-color: #10296C;
+}
+
+#navBtm .container {
+  padding: 0px;
+}
+
+#navBtm #header .rightList .orders li .tipLogin, #header .rightList .orders li #navBtm .tipLogin, #navBtm #userHead .rightList .orders li .tipLogin, #userHead .rightList .orders li #navBtm .tipLogin, #navBtm #header .rightList .orders li .orderCont, #header .rightList .orders li #navBtm .orderCont, #navBtm #userHead .rightList .orders li .orderCont, #userHead .rightList .orders li #navBtm .orderCont, #navBtm #header .rightList .orders li .phoneNum, #header .rightList .orders li #navBtm .phoneNum, #navBtm #userHead .rightList .orders li .phoneNum, #userHead .rightList .orders li #navBtm .phoneNum, #navBtm h3, #navBtm .cartTips li {
+  height: 40px;
+  background-color: #FF6600;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+}
+
+#navBtm h3 {
+  width: 180px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#navBtm h3 > i {
+  position: absolute;
+  left: 105px;
+  transform: rotate(180deg);
+}
+
+#navBtm h3 .navSec {
+  height: 471px;
+  border: 1px solid #FF6600;
+  border-width: 2px;
+  position: absolute;
+  top: 39px;
+  left: 0px;
+}
+
+#navBtm h3 .navSec > li > div, #navBtm h3 .navSec > li > h4 {
+  padding: 0px 10px 0px 20px;
+}
+
+#navBtm h3 .navSec > li {
+  width: 176px;
+  height: 73px;
+  padding-top: 10px;
+  position: relative;
+  border-top: 1px solid #CBCBCB;
+}
+
+#navBtm h3 .navSec > li:first-child {
+  border-top: 0 none;
+}
+
+#navBtm h3 .navSec > li:last-child {
+  height: 176px;
+}
+
+#navBtm h3 .navSec > li:last-child div {
+  line-height: 30px;
+}
+
+#navBtm h3 .navSec > li:hover s {
+  display: none;
+}
+
+#navBtm h3 .navSec > li > h4 {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+}
+
+#navBtm h3 .navSec > li > a {
+  margin: 0px 4px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#navBtm h3 .navSec > li .hot {
+  color: #FF6600;
+}
+
+#navBtm h3 .navSec > li > i {
+  color: #CBCBCB;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  transform: rotate(0deg);
+}
+
+#navBtm h3 .navSec > li > s {
+  position: absolute;
+  color: #CBCBCB;
+  right: 12px;
+  top: 10px;
+}
+
+#navBtm h3 .navSec > li .navThird {
+  width: 818px;
+  height: 490px;
+  position: absolute;
+  left: 135px;
+  top: 0px;
+  z-index: 2;
+  background: url("../img/kiddy.jpg") no-repeat;
+  display: none;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft {
+  margin: 20px 10px;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft > li {
+  height: 36px;
+  padding-top: 12px;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft > li h4 {
+  font-weight: bold;
+  float: left;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft > li ul {
+  float: left;
+  margin-left: 8px;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft > li ul > li {
+  height: 12px;
+  line-height: 12px;
+  padding: 0 10px;
+  border-right: 1px solid #E2D5CC;
+  color: #666666;
+}
+
+#navBtm h3 .navSec > li .navThird .navLeft > li ul > li:last-child {
+  border-right: 0 none;
+}
+
+#navBtm h3 .navSec > li .navThird .navRight {
+  width: 205px;
+  border-top: 1px solid #F2F2F2;
+  border-left: 1px solid #F2F2F2;
+  margin: 0px 24px;
+}
+
+#navBtm h3 .navSec > li .navThird .navRight li {
+  float: left;
+  border-right: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+#navBtm h3 .navSec > li .navThird .navRight li a {
+  float: left;
+  width: 100px;
+  height: 40px;
+  background: url("../img/thinkpad.jpg") no-repeat 0 0;
+}
+
+#navBtm h3 .navSec > li .navThird > h2 {
+  width: 205px;
+  color: #484848;
+  text-align: left;
+  margin: 20px 20px 6px 0px;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  font-weight: bold;
+}
+
+#navBtm li {
+  float: left;
+}
+
+#navBtm .navList > li {
+  width: 89.57143px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+#navBtm .cartTips li {
+  text-align: center;
+  padding-top: 10px;
+  border: 1px solid #FF6600;
+  position: relative;
+}
+
+#navBtm .cartTips li:first-child p, #navBtm .cartTips li:last-child p {
+  width: 230px;
+  height: 85px;
+  line-height: 85px;
+  color: #BBBBBB;
+  border: 1px solid #FF6600;
+  border-top: 0 none;
+  position: absolute;
+  top: 39px;
+  z-index: 5;
+  background-color: #fff;
+}
+
+#navBtm .cartTips li:first-child {
+  width: 117px;
+}
+
+#navBtm .cartTips li:first-child span {
+  border-right: 1px solid #E2E2E2;
+}
+
+#navBtm .cartTips li:first-child span s {
+  margin: 0px 7px;
+  font-weight: bold;
+  color: #FF993E;
+}
+
+#navBtm .cartTips li:first-child p {
+  left: -1px;
+}
+
+#navBtm .cartTips li:last-child {
+  width: 113px;
+}
+
+#navBtm .cartTips li:last-child p {
+  right: -1px;
+}
+
+#navBtm .cartTips li:last-child p button {
+  width: 46px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #FF6600;
+  margin: 0px 4px;
+  border-radius: 5px;
+}
+
+#navBtm .cartTips li:hover {
+  background-color: #fff;
+  color: #484848;
+  border-bottom: 0 none;
+}
+
+#navBtm .cartTips li:hover span {
+  border-right: 0 none;
+}
+
+#navBtm .cartTips li:hover i {
+  transform: rotate(0deg);
+}
+
+#navBtm .cartTips li:last-child:hover {
+  width: 115px;
+  margin-left: -2px;
+}
+
+#navBtm .cartTips li span {
+  float: left;
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+}
+
+#navBtm .cartTips li i {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  transform: rotate(180deg);
+}
+
+#myLinks > .container {
+  padding-top: 72px;
+}
+
+#myLinks > .container > div {
+  float: left;
+  width: 216px;
+  height: 185px;
+  margin-left: 18px;
+  border-right: 1px solid #E2E2E2;
+}
+
+#myLinks > .container > div h3 {
+  font-size: 14px;
+  padding-left: 28px;
+  line-height: 22px;
+  font-weight: bold;
+  position: relative;
+}
+
+#myLinks > .container > div h3 s {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+}
+
+#myLinks > .container > div ul {
+  margin-top: 8px;
+}
+
+#myLinks > .container > div ul li {
+  height: 22px;
+  padding-left: 45px;
+  position: relative;
+}
+
+#myLinks > .container > div ul li i {
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #666666;
+  position: absolute;
+  left: 33px;
+  top: 10px;
+}
+
+#myLinks > .container > div ul li a {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+#myLinks > .container > div:last-child {
+  border-right: 0 none;
+}
+
+#footer .container {
+  padding: 80px 0px 36px;
+}
+
+#footer .container .picLink {
+  padding-left: 249px;
+  margin-bottom: 3px;
+}
+
+#footer .container .picLink > li {
+  float: left;
+  margin-right: 5px;
+}
+
+#footer .container .picLink > li a {
+  float: left;
+  height: 45px;
+}
+
+#footer .container .blogroll, #footer .container .info {
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+  text-align: center;
+  color: #474747;
+}
+
+#footer .container .blogroll a {
+  margin-right: 12px;
+}
+
+#userHead .container {
+  padding: 0px 110px;
+}
+
+#welcomeArea {
+  height: 108px;
+}
+
+#welcomeArea .container {
+  width: 980px;
+}
+
+#welcomeArea .container h1 {
+  width: 319px;
+  height: 65px;
+  margin-top: 22px;
+  text-indent: -10000px;
+  background: url("../img/logocn_1213.png") no-repeat;
+  margin-right: 25px;
+}
+
+#welcomeArea .container h2 {
+  margin-top: 28px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  border-left: 1px solid #D9D9D9;
+  padding-left: 27px;
+}
