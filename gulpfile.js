@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-09 20:45:05
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-11 18:13:36
+* @Last Modified time: 2017-11-14 21:53:54
 */
 
 var gulp = require('gulp');
@@ -21,11 +21,24 @@ gulp.task('compileSass',function(){
 var opt = {
     newLine:';'
 }
-gulp.task('mergeJs',function(){
+gulp.task('indexJs',function(){
     gulp.src(['./src/js/_conmonHtml.js','src/js/index.js'])
         .pipe(concat('index.js'))
         .pipe(gulp.dest(path.dist))
 })
+gulp.task('loginJs',function(){
+    gulp.src(['./src/js/_conmonHtml.js','src/js/login.js'])
+        .pipe(concat('login.js'))
+        .pipe(gulp.dest(path.dist))
+})
+gulp.task('registerJs',function(){
+    gulp.src(['./src/js/_conmonHtml.js','src/js/register.js'])
+        .pipe(concat('register.js'))
+        .pipe(gulp.dest(path.dist))
+})
 gulp.task('jtSass',function(){
     gulp.watch('./src/sass/*.scss',['compileSass']);
+})
+gulp.task('jtJs',function(){
+    gulp.watch('src/js/register.js',['registerJs']);
 })
