@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-11 18:10:47
+* @Last Modified time: 2017-11-14 12:27:57
 */
 (function(){
     jQuery(function($){
@@ -74,6 +74,7 @@
                     $(this).find('.navThird').css('display','none');
             })
         });
-        
+        $('#myLinks').load('../html/commonHtml.html .mylink'); 
+        $('#footer').load('../html/commonHtml.html .foot');
     });
 })();
