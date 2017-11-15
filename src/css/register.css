@@ -22,7 +22,14 @@
   width: 655px;
   margin: 16px 162px;
   height: 30px;
-  background: url("../img/register_step.png") no-repeat 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#regMain .container .regStep > img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 #regMain .container .regCont {
@@ -91,6 +98,9 @@
   height: 30px;
   width: 116px;
   background-color: #EAD6D1;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 6px;
 }
 
 #regMain .container .regCont .step1 p.mail > span {
@@ -146,6 +156,12 @@
   right: 0px;
   top: -5px;
   color: #F55B17;
+}
+
+#regMain .container .regCont .step2 p .padLen {
+  display: inline-block;
+  height: 16px;
+  margin: 7px 5px;
 }
 
 #regMain .container .regCont .step2 p.check {
