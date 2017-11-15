@@ -1,5 +1,6 @@
-(function(){
-    jQuery(function($){
+
+requirejs(['config'],function(){
+    requirejs(['jquery'],function($){
         // load(url,[data],[callback]) 载入远程 HTML 文件代码并插入页面中。
         $('#header').load('http://localhost:9393/html/commonHtml.html .head',function(){
             $(this).find('.orders').on('mouseenter','li',function(){
@@ -85,5 +86,5 @@
         });
         $('#myLinks').load('../html/commonHtml.html .mylink'); 
         $('#footer').load('../html/commonHtml.html .foot');
-    });
-})();
+    })
+});

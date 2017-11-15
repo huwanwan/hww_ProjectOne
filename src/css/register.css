@@ -37,6 +37,10 @@
   padding-top: 38px;
 }
 
+#regMain .container .regCont i {
+  color: #F55B17;
+}
+
 #regMain .container .regCont .step1 p, #regMain .container .regCont .step2 p {
   font-size: 14px;
   line-height: 32px;

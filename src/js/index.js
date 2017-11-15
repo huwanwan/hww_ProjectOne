@@ -3,11 +3,11 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-14 16:51:35
+* @Last Modified time: 2017-11-15 12:21:17
 */
-(function(){
-    jQuery(function($){
-        //main的轮播图; 
+requirejs(['config'],function(){
+    requirejs(['jquery','carousel','conmon','comHtmljs'],function($){
+             //main的轮播图; 
         $('.carousel').hwCarousel({
             width:771,
             height:245,
@@ -1202,5 +1202,5 @@
         var lifeStyle = new CommonArea(lifeUser);
         
         
-    });
-})();
+    })
+})
