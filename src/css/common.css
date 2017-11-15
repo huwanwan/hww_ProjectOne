@@ -346,6 +346,7 @@ s, i, em {
 
 #navBtm {
   background-color: #10296C;
+  position: relative;
 }
 
 #navBtm .container {
@@ -372,20 +373,24 @@ s, i, em {
   transform: rotate(180deg);
 }
 
-#navBtm h3 .navSec {
+#navBtm .navSec {
+  width: 180px;
+  background-color: #fff;
   height: 471px;
   border: 1px solid #FF6600;
   border-width: 2px;
+  background-color: #fff;
+  z-index: 5;
   position: absolute;
   top: 39px;
-  left: 0px;
+  left: 32px;
 }
 
-#navBtm h3 .navSec > li > div, #navBtm h3 .navSec > li > h4 {
+#navBtm .navSec > li > div, #navBtm .navSec > li > h4 {
   padding: 0px 10px 0px 20px;
 }
 
-#navBtm h3 .navSec > li {
+#navBtm .navSec > li {
   width: 176px;
   height: 73px;
   padding-top: 10px;
@@ -393,39 +398,44 @@ s, i, em {
   border-top: 1px solid #CBCBCB;
 }
 
-#navBtm h3 .navSec > li:first-child {
+#navBtm .navSec > li:first-child {
   border-top: 0 none;
 }
 
-#navBtm h3 .navSec > li:last-child {
+#navBtm .navSec > li:last-child {
   height: 176px;
 }
 
-#navBtm h3 .navSec > li:last-child div {
+#navBtm .navSec > li:last-child div {
   line-height: 30px;
 }
 
-#navBtm h3 .navSec > li:hover s {
+#navBtm .navSec > li:hover s {
   display: none;
 }
 
-#navBtm h3 .navSec > li > h4 {
+#navBtm .navSec > li > div {
+  height: 30px;
+  line-height: 30px;
+}
+
+#navBtm .navSec > li > h4 {
   font-size: 12px;
   line-height: 12px;
   font-weight: bold;
 }
 
-#navBtm h3 .navSec > li > a {
+#navBtm .navSec > li > a {
   margin: 0px 4px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 30px;
 }
 
-#navBtm h3 .navSec > li .hot {
+#navBtm .navSec > li .hot {
   color: #FF6600;
 }
 
-#navBtm h3 .navSec > li > i {
+#navBtm .navSec > li > i {
   color: #CBCBCB;
   position: absolute;
   left: 6px;
@@ -433,14 +443,14 @@ s, i, em {
   transform: rotate(0deg);
 }
 
-#navBtm h3 .navSec > li > s {
+#navBtm .navSec > li > s {
   position: absolute;
   color: #CBCBCB;
   right: 12px;
   top: 10px;
 }
 
-#navBtm h3 .navSec > li .navThird {
+#navBtm .navSec > li .navThird {
   width: 818px;
   height: 490px;
   position: absolute;
@@ -451,26 +461,27 @@ s, i, em {
   display: none;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft {
+#navBtm .navSec > li .navThird .navLeft {
   margin: 20px 10px;
+  width: 500px;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft > li {
+#navBtm .navSec > li .navThird .navLeft > li {
   height: 36px;
   padding-top: 12px;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft > li h4 {
+#navBtm .navSec > li .navThird .navLeft > li h4 {
   font-weight: bold;
   float: left;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft > li ul {
+#navBtm .navSec > li .navThird .navLeft > li ul {
   float: left;
   margin-left: 8px;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft > li ul > li {
+#navBtm .navSec > li .navThird .navLeft > li ul > li {
   height: 12px;
   line-height: 12px;
   padding: 0 10px;
@@ -478,31 +489,31 @@ s, i, em {
   color: #666666;
 }
 
-#navBtm h3 .navSec > li .navThird .navLeft > li ul > li:last-child {
+#navBtm .navSec > li .navThird .navLeft > li ul > li:last-child {
   border-right: 0 none;
 }
 
-#navBtm h3 .navSec > li .navThird .navRight {
+#navBtm .navSec > li .navThird .navRight {
   width: 205px;
   border-top: 1px solid #F2F2F2;
   border-left: 1px solid #F2F2F2;
   margin: 0px 24px;
 }
 
-#navBtm h3 .navSec > li .navThird .navRight li {
+#navBtm .navSec > li .navThird .navRight li {
   float: left;
   border-right: 1px solid #F2F2F2;
   border-bottom: 1px solid #F2F2F2;
 }
 
-#navBtm h3 .navSec > li .navThird .navRight li a {
+#navBtm .navSec > li .navThird .navRight li a {
   float: left;
   width: 100px;
   height: 40px;
   background: url("../img/thinkpad.jpg") no-repeat 0 0;
 }
 
-#navBtm h3 .navSec > li .navThird > h2 {
+#navBtm .navSec > li .navThird > h2 {
   width: 205px;
   color: #484848;
   text-align: left;

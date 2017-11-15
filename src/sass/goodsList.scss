@@ -1,0 +1,95 @@
+$border:1px solid #DBDBDB;
+#contTips{
+    background-color: #F0F0F0;
+    .container{
+        padding:0px;
+        %comon{
+            display:line-block;
+            height:29px;
+            line-height:29px; 
+        }
+        a{
+            @extend %comon;
+            color:#777777;
+            margin-right:5px;
+        };
+        span{
+            @extend %comon;
+            color:#333333;
+        };
+    }   
+}
+#main{
+    .container{
+        padding:0px;
+        padding-top:5px;
+    }
+    .aside{
+        width:179px;
+        height:1256px;
+        background-color: #FFDC93;
+        .listBox{
+            border:1px solid #F3CE76;
+            >li{
+                height:31px;
+                overflow:hidden;
+                font-size:14px;
+                background-color: #FFDC93;
+                line-height:30px;
+                color:#845400;
+                border-bottom:1px solid #F3CE76;
+                position:relative;
+                &:first-child{
+                    height:168px;
+                }
+                >i{
+                    display:block;
+                    margin-right:10px;
+                    font-size:12px;
+                    position:absolute;
+                    top:8px;
+                    left:10px;
+                }
+                a{
+                    margin-left:30px;
+                }
+                .lists{
+                    padding:6px 20px;
+                    background-color: #FFFFF2;
+                    >li{
+                        border:0 none;
+                        line-height:24px;
+                    }
+                }
+            }
+        }
+        .hotList{
+            margin-top:10px;
+            h3{
+                height:30px;
+                line-height:30px;
+                border-bottom:$border;
+                padding-left:10px;
+            }
+            >div{
+                height:93px;
+                border-bottom:$border;
+                padding-top:16px;
+                padding-left:9px;
+                >img{
+                    float:left;
+                    width:60px;
+                    height:45px;
+                }
+                p{
+                    width:97px;
+                    line-height:18px;
+                }
+                span{
+                    color:#FF6600;
+                }
+            }
+            
+        }
+    }
+}

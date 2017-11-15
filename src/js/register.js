@@ -1,6 +1,8 @@
 
 requirejs(['config'],function(){
-    requirejs(['jquery','conmon','comHtmljs'],function($,m){
+    requirejs(['jquery','comHtmljs','conmon'],function($,m){
+        m.userH();
+        m.footer();
         $('#welcomeArea').load('../html/commonHtml.html .userTop',function(){
             $(this).find('h2').text('新用户注册');
         });

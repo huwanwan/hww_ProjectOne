@@ -3,10 +3,15 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-15 12:21:17
+* @Last Modified time: 2017-11-15 21:13:25
 */
 requirejs(['config'],function(){
-    requirejs(['jquery','carousel','conmon','comHtmljs'],function($){
+    requirejs(['jquery','comHtmljs','carousel','conmon'],function($,m){
+        m.header();
+        m.navTop();
+        m.navBtm();
+        m.links();
+        m.footer();
              //main的轮播图; 
         $('.carousel').hwCarousel({
             width:771,

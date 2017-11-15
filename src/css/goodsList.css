@@ -1,0 +1,108 @@
+#contTips {
+  background-color: #F0F0F0;
+}
+
+#contTips .container {
+  padding: 0px;
+}
+
+#contTips .container a, #contTips .container span {
+  display: line-block;
+  height: 29px;
+  line-height: 29px;
+}
+
+#contTips .container a {
+  color: #777777;
+  margin-right: 5px;
+}
+
+#contTips .container span {
+  color: #333333;
+}
+
+#main .container {
+  padding: 0px;
+  padding-top: 5px;
+}
+
+#main .aside {
+  width: 179px;
+  height: 1256px;
+  background-color: #FFDC93;
+}
+
+#main .aside .listBox {
+  border: 1px solid #F3CE76;
+}
+
+#main .aside .listBox > li {
+  height: 31px;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: #FFDC93;
+  line-height: 30px;
+  color: #845400;
+  border-bottom: 1px solid #F3CE76;
+  position: relative;
+}
+
+#main .aside .listBox > li:first-child {
+  height: 168px;
+}
+
+#main .aside .listBox > li > i {
+  display: block;
+  margin-right: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+
+#main .aside .listBox > li a {
+  margin-left: 30px;
+}
+
+#main .aside .listBox > li .lists {
+  padding: 6px 20px;
+  background-color: #FFFFF2;
+}
+
+#main .aside .listBox > li .lists > li {
+  border: 0 none;
+  line-height: 24px;
+}
+
+#main .aside .hotList {
+  margin-top: 10px;
+}
+
+#main .aside .hotList h3 {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #DBDBDB;
+  padding-left: 10px;
+}
+
+#main .aside .hotList > div {
+  height: 93px;
+  border-bottom: 1px solid #DBDBDB;
+  padding-top: 16px;
+  padding-left: 9px;
+}
+
+#main .aside .hotList > div > img {
+  float: left;
+  width: 60px;
+  height: 45px;
+}
+
+#main .aside .hotList > div p {
+  width: 97px;
+  line-height: 18px;
+}
+
+#main .aside .hotList > div span {
+  color: #FF6600;
+}
