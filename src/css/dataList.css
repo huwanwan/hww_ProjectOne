@@ -1,0 +1,469 @@
+#mainTitle {
+  background-color: #F0F0F0;
+}
+
+#mainTitle .container {
+  height: 60px;
+}
+
+#mainTitle .container p {
+  height: 30px;
+}
+
+#mainTitle .container p a {
+  color: #777777;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+#mainTitle .container p span {
+  color: #333333;
+}
+
+#mainTitle .container .goodsContrast {
+  height: 34px;
+  margin-top: 8px;
+  color: #767676;
+}
+
+#mainTitle .container .goodsContrast span {
+  line-height: 34px;
+}
+
+#mainTitle .container .goodsContrast li {
+  float: left;
+  width: 43px;
+  height: 32px;
+  border: 1px dashed #767676;
+  margin-left: 5px;
+}
+
+#mainTitle .container .goodsContrast button {
+  width: 66px;
+  height: 32px;
+  margin-left: 10px;
+  background-color: #FCFCFC;
+  color: #777777;
+  border: 1px solid #767676;
+}
+
+#mainTips {
+  height: 39px;
+  background-color: #F0F0F0;
+}
+
+#mainTips .container ul li {
+  height: 36px;
+  float: left;
+  width: 102px;
+  text-align: center;
+  padding: 12px 23px 0px;
+  color: #787878;
+}
+
+#mainTips .container ul li.clickTips {
+  height: 39px;
+  background-color: #fff;
+  border-radius: 2px 2px 0px 0px;
+  border-top: 2px solid #F87500;
+  padding-top: 10px;
+}
+
+#mainTips .container p {
+  height: 36px;
+  line-height: 36px;
+}
+
+#mainTips .container p input {
+  margin: 5px;
+}
+
+.goodsCont {
+  height: 591px;
+}
+
+.goodsCont .ImgTab {
+  width: 490px;
+  padding-top: 26px;
+}
+
+.goodsCont .ImgTab .picBox {
+  width: 489px;
+  height: 430px;
+  padding: 20px;
+}
+
+.goodsCont .ImgTab .sImg {
+  height: 135px;
+  padding: 23px 0px;
+}
+
+.goodsCont .ImgTab .sImg li {
+  float: left;
+  width: 80px;
+  height: 60px;
+  margin: 0px 16px 0px 10px;
+  border: 1px solid #E2E2E2;
+}
+
+.goodsCont .contBox h2 {
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.goodsCont .contBox .conLeft {
+  width: 513px;
+}
+
+.goodsCont .contBox .conLeft p {
+  line-height: 28px;
+  letter-spacing: 5px;
+  text-align: left;
+  position: relative;
+  color: #000;
+}
+
+.goodsCont .contBox .conLeft p:last-child {
+  letter-spacing: 0px;
+}
+
+.goodsCont .contBox .conLeft p span {
+  position: absolute;
+  left: 75px;
+  letter-spacing: 0px;
+  color: #666666;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(3) span {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(4) span {
+  color: #F7661F;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(4) span em {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(5) {
+  height: 44px;
+  position: relative;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(5) s {
+  position: absolute;
+}
+
+.goodsCont .contBox .conLeft p:nth-child(5) i {
+  letter-spacing: 0px;
+  position: absolute;
+  left: 72px;
+  top: 44px;
+}
+
+.goodsCont .contBox .conLeft p.qty {
+  height: 30px;
+  position: relative;
+}
+
+.goodsCont .contBox .conLeft p.qty i {
+  display: block;
+  width: 25px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #E2E2E2;
+  color: #333;
+  left: 72px;
+  top: 0px;
+  padding-left: 2px;
+}
+
+.goodsCont .contBox .conLeft p.qty .add {
+  left: 147px;
+}
+
+.goodsCont .contBox .conLeft p.qty span {
+  display: block;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #E2E2E2;
+  text-align: center;
+  position: absolute;
+  left: 97px;
+  border-left: 0 none;
+  border-right: 0 none;
+  top: 0px;
+}
+
+.goodsCont .contBox .conLeft p.qty em {
+  display: block;
+  position: absolute;
+  left: 210px;
+  top: 0px;
+  color: #58bc58;
+}
+
+.goodsCont .contBox .conBtm {
+  margin-top: 20px;
+  width: 488px;
+  height: 137px;
+  background-color: #F0F0F0;
+  padding: 20px;
+}
+
+.goodsCont .contBox .conBtm p {
+  letter-spacing: 0px;
+}
+
+.goodsCont .contBox .conBtm button {
+  width: 214px;
+  height: 48px;
+  background-color: #FF6600;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.goodsCont .contBox .conBtm p {
+  height: 34px;
+}
+
+.goodsCont .contBox .conBtm p a {
+  float: left;
+  width: 83px;
+  border: 1px solid #E2E2E2;
+  line-height: 34px;
+  text-align: center;
+}
+
+.goodsCont .contBox .conBtm p span {
+  float: left;
+  background-color: #fff;
+}
+
+.goodsCont .contBox .conRight {
+  width: 196px;
+  border-left: 1px solid #E2E2E2;
+  height: 484px;
+  padding-left: 8px;
+}
+
+.goodsCont .contBox .conRight > a {
+  display: block;
+  text-align: center;
+  height: 26px;
+  line-height: 26px;
+  color: #0060BF;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.goodsCont .contBox .conRight > img {
+  margin: 5px;
+}
+
+.goodsCont .contBox .conRight p {
+  height: 26px;
+  line-height: 26px;
+  margin-left: 5px;
+}
+
+.goodsCont .contBox .conRight span {
+  display: block;
+  height: 12px;
+}
+
+.goodsCont .contBox .conRight span i {
+  float: left;
+  width: 90px;
+  height: 12px;
+  overflow: hidden;
+  background: url("../img/dandan.gif") no-repeat;
+  background-position: 0px 0px;
+}
+
+.goodsCont .contBox .conRight em {
+  margin-top: 10px;
+  display: block;
+  width: 167px;
+  height: 192px;
+  background: url("../img/code.jpg") no-repeat;
+  margin-left: 5px;
+}
+
+.listdata .error {
+  height: 28px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.listdata .error > span {
+  color: #015FBF;
+}
+
+.listdata .listText {
+  margin-top: 77px;
+  width: 1002px;
+}
+
+.listdata .listText .title {
+  height: 118px;
+  overflow: hidden;
+}
+
+.listdata .listText .title li {
+  color: #fff;
+  width: 250px;
+  height: 118px;
+  float: left;
+  padding-left: 68px;
+  padding-right: 32px;
+  background-color: #FF9500;
+}
+
+.listdata .listText .title li h4 {
+  height: 30px;
+  line-height: 30px;
+}
+
+.listdata .listText .title li p {
+  line-height: 16px;
+}
+
+.listdata .listText .title li:nth-child(2) {
+  background-color: #FF5758;
+}
+
+.listdata .listText .title li:nth-child(3) {
+  background-color: #67A90F;
+}
+
+.listdata .listText .title li:nth-child(4) {
+  background-color: #0DB7C9;
+}
+
+.listdata .listText .ask {
+  height: 253px;
+  padding-top: 10px;
+  overflow: hidden;
+  background-color: #EAEAEA;
+}
+
+.listdata .listText .ask li {
+  float: left;
+  border-right: 1px solid #E2E2E2;
+  width: 250px;
+  padding-left: 20px;
+  color: #000;
+  background-color: #EAEAEA;
+}
+
+.listdata .listText .ask li h4 {
+  line-height: 20px;
+}
+
+.listdata .listText .ask li p {
+  padding-right: 5px;
+  text-indent: 2em;
+  line-height: 16px;
+}
+
+.listdata .listText .tipsBtm {
+  overflow: hidden;
+  padding: 10px 0px;
+  background-color: #005FBF;
+}
+
+.listdata .listText .tipsBtm li {
+  padding: 10px;
+  float: left;
+  width: 500px;
+  height: 258px;
+  border-right: 1px solid #E2E2E2;
+  color: #fff;
+}
+
+.listdata .listText .tipsBtm li h4 {
+  font-weight: bold;
+}
+
+.listdata .listText .tipsBtm li span {
+  margin: 5px 0px;
+  display: block;
+  text-indent: 2em;
+}
+
+.listdata .listText .goodsName {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 20px 5px;
+  color: #000;
+}
+
+#hisList h4 {
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+#hisList h4 .clear {
+  float: right;
+  height: 24px;
+  line-height: 24px;
+  color: #005FBF;
+}
+
+#hisList ul {
+  margin-top: 20px;
+  overflow: hidden;
+  padding-left: 69px;
+}
+
+#hisList ul li {
+  float: left;
+  width: 127px;
+  height: 220px;
+  margin-right: 60px;
+}
+
+#hisList ul li img {
+  width: 125px;
+  height: 94px;
+  margin: 10px 1px;
+}
+
+#hisList ul li a {
+  display: block;
+  height: 28px;
+  line-height: 14px;
+  overflow: hidden;
+}
+
+#hisList ul li span {
+  display: block;
+  color: #f00;
+  height: 20px;
+  line-height: 20px;
+}
+
+#upTop {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#upTop img {
+  width: 80px;
+  height: 80px;
+}

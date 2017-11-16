@@ -1,3 +1,13 @@
+#main .aside .vote div button, #main .mainList .listTitle ul li:last-child .otherPrice button, #main .mainList .goodsFilter .inserT .default button, #main .mainList .goodsFilter .contrastGoods button, #main .mainList .goods ul li .click a, #main .mainList .goods .page button {
+  width: 46px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: #F7661F;
+  border-radius: 2px;
+  color: #fff;
+}
+
 #contTips {
   background-color: #F0F0F0;
 }
@@ -21,6 +31,21 @@
   color: #333333;
 }
 
+#main .mainList .goodsFilter .inserB .page, #main .mainList .goods .page {
+  height: 39px;
+  color: #B3B3B3;
+  padding: 8px 10px 0px;
+}
+
+#main .mainList .goodsFilter .inserB .page i, #main .mainList .goods .page i {
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #DBDBDB;
+  padding: 5px;
+}
+
 #main .container {
   padding: 0px;
   padding-top: 5px;
@@ -29,7 +54,6 @@
 #main .aside {
   width: 179px;
   height: 1256px;
-  background-color: #FFDC93;
 }
 
 #main .aside .listBox {
@@ -75,7 +99,7 @@
 }
 
 #main .aside .hotList {
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 
 #main .aside .hotList h3 {
@@ -96,13 +120,396 @@
   float: left;
   width: 60px;
   height: 45px;
+  margin-right: 10px;
 }
 
 #main .aside .hotList > div p {
-  width: 97px;
+  padding-left: 6px;
   line-height: 18px;
 }
 
 #main .aside .hotList > div span {
+  font-weight: bold;
+  display: block;
+  height: 20px;
+  line-height: 20px;
   color: #FF6600;
+}
+
+#main .aside .vote {
+  border: 1px solid #DBDBDB;
+  background-color: #EEEEEE;
+}
+
+#main .aside .vote h4, #main .aside .vote div {
+  height: 42px;
+  line-height: 42px;
+  padding: 0px 10px;
+}
+
+#main .aside .vote p {
+  background-color: #fff;
+  height: 40px;
+  line-height: 20px;
+  padding: 0px 10px;
+}
+
+#main .aside .vote li {
+  height: 34px;
+  line-height: 34px;
+  padding: 0px 10px;
+}
+
+#main .aside .vote li input {
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+#main .aside .vote li:nth-child(even) {
+  background-color: #fff;
+}
+
+#main .aside .vote li:nth-child(odd) {
+  background-color: #F2F2F2;
+}
+
+#main .aside .vote div button {
+  margin: 8px 14px 0px 30px;
+}
+
+#main .mainList {
+  width: 1010px;
+}
+
+#main .mainList .listTitle {
+  border: 1px solid #DBDBDB;
+}
+
+#main .mainList .listTitle h4 {
+  height: 30px;
+  line-height: 30px;
+  background-color: #EDF3FA;
+  padding-left: 22px;
+}
+
+#main .mainList .listTitle ul {
+  height: 84px;
+}
+
+#main .mainList .listTitle ul li {
+  padding-left: 51px;
+  border-top: 1px solid #DBDBDB;
+  overflow: hidden;
+}
+
+#main .mainList .listTitle ul li label {
+  float: left;
+}
+
+#main .mainList .listTitle ul li div {
+  float: left;
+  margin: 0px 24px;
+}
+
+#main .mainList .listTitle ul li:first-child {
+  height: 37px;
+}
+
+#main .mainList .listTitle ul li:first-child label, #main .mainList .listTitle ul li:first-child > div, #main .mainList .listTitle ul li:first-child > div a {
+  height: 37px;
+  line-height: 37px;
+}
+
+#main .mainList .listTitle ul li:first-child > div a {
+  display: block;
+}
+
+#main .mainList .listTitle ul li:first-child > div span {
+  color: #D5CCD5;
+}
+
+#main .mainList .listTitle ul li:last-child {
+  height: 46px;
+}
+
+#main .mainList .listTitle ul li:last-child label, #main .mainList .listTitle ul li:last-child > div, #main .mainList .listTitle ul li:last-child > div a {
+  height: 46px;
+  line-height: 46px;
+}
+
+#main .mainList .listTitle ul li:last-child > div a {
+  display: block;
+}
+
+#main .mainList .listTitle ul li:last-child > div span {
+  color: #D5CCD5;
+}
+
+#main .mainList .listTitle ul li:last-child .otherPrice input {
+  height: 25px;
+  width: 44px;
+  border: 1px solid #DBDBDB;
+  margin: 0px 4px;
+}
+
+#main .mainList .goodsFilter {
+  border: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .inserT {
+  height: 38px;
+  overflow: hidden;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .inserT p {
+  float: left;
+}
+
+#main .mainList .goodsFilter .inserT p a {
+  padding: 0px 25px 0px 12px;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  position: relative;
+  border-right: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .inserT p a i {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+#main .mainList .goodsFilter .inserT p a .glyphicon-th-large {
+  font-size: 16px;
+  color: #999999;
+  margin-top: -1px;
+}
+
+#main .mainList .goodsFilter .inserT p a .glyphicon-list-alt {
+  font-size: 16px;
+  color: #999999;
+}
+
+#main .mainList .goodsFilter .inserT p a:nth-last-child(-n+3) {
+  padding: 0px 12px;
+}
+
+#main .mainList .goodsFilter .inserT .default {
+  float: right;
+  height: 38px;
+  padding-left: 8px;
+  border-right: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .inserT .default input {
+  width: 202px;
+  height: 26px;
+  border: 1px solid #DBDBDB;
+  margin-top: 6px;
+  padding-left: 5px;
+  float: left;
+}
+
+#main .mainList .goodsFilter .inserT .default button {
+  margin: 6px 5px 0px;
+  float: left;
+}
+
+#main .mainList .goodsFilter .inserB {
+  height: 39px;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .inserB label {
+  margin: 13px 8px 0px;
+  font-weight: normal;
+}
+
+#main .mainList .goodsFilter .inserB label input {
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+#main .mainList .goodsFilter .contrastGoods {
+  width: 1008px;
+  height: 40px;
+  overflow: hidden;
+}
+
+#main .mainList .goodsFilter .contrastGoods h4 {
+  width: 68px;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .contrastGoods li {
+  width: 42px;
+  float: left;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  color: #E5E6EB;
+  border-right: 1px solid #DBDBDB;
+}
+
+#main .mainList .goodsFilter .contrastGoods button {
+  margin: 8px 6px;
+}
+
+#main .mainList .goodsFilter .contrastGoods a {
+  color: #003399;
+}
+
+#main .mainList .goodsFilter .contrastGoods.scrollT {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  border: 1px solid #DBDBDB;
+  z-index: 5;
+}
+
+#main .mainList .goodsFilter .contrastGoods img.notPos {
+  position: static;
+  top: 0;
+  left: 0;
+  margin-top: -2px;
+}
+
+#main .mainList .goods {
+  padding-top: 40px;
+}
+
+#main .mainList .goods ul {
+  overflow: hidden;
+  height: 1464px;
+}
+
+#main .mainList .goods ul li {
+  float: left;
+  width: 250px;
+  height: 360px;
+  padding: 0px 15px;
+}
+
+#main .mainList .goods ul li img {
+  margin-top: 20px;
+  width: 180px;
+  height: 135px;
+}
+
+#main .mainList .goods ul li .seven {
+  width: 30px;
+  height: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+#main .mainList .goods ul li .seven i {
+  width: 198px;
+  height: 458px;
+  display: block;
+  background: url("../img/pro_l_9V1.png") no-repeat;
+  position: absolute;
+  top: -276px;
+  left: -67px;
+}
+
+#main .mainList .goods ul li .cont {
+  height: 32px;
+}
+
+#main .mainList .goods ul li .cont a {
+  color: #666666;
+  line-height: 16px;
+}
+
+#main .mainList .goods ul li .other {
+  display: block;
+  height: 18px;
+  margin: 5px 0px;
+  line-height: 18px;
+  color: #84984F;
+}
+
+#main .mainList .goods ul li .hits {
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+#main .mainList .goods ul li .hits img {
+  width: 60px;
+  position: absolute;
+  top: -20px;
+  left: 0px;
+}
+
+#main .mainList .goods ul li .price {
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #FF7D00;
+}
+
+#main .mainList .goods ul li .price span {
+  font-size: 12px;
+  color: #CCCCCC;
+  margin-right: 5px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+#main .mainList .goods ul li .click {
+  height: 49px;
+  overflow: hidden;
+  padding: 12px 20px;
+}
+
+#main .mainList .goods ul li .click a {
+  float: left;
+  margin: 0px 2px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #DBDBDB;
+  text-decoration: none;
+}
+
+#main .mainList .goods ul li .click a:first-child {
+  background-color: #F7661F;
+  color: #fff;
+}
+
+#main .mainList .goods ul li .click a:first-child:hover {
+  color: #000;
+  background-color: #FFF0D9;
+}
+
+#main .mainList .goods ul li .click a:hover {
+  border-color: #F9F9F9;
+}
+
+#main .mainList .goods .page {
+  color: #333;
+}
+
+#main .mainList .goods .page i:last-child {
+  background-color: #ccc;
+}
+
+#main .mainList .goods .page input {
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #DBDBDB;
+  padding: 5px;
 }

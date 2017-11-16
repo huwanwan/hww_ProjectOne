@@ -75,67 +75,74 @@ $borderStyle:1px solid #E2E2E2;
     $border:1px solid #FF6600;
     .container{padding:0px;}
     %pos{height:40px;background-color: #FF6600;color:#fff;line-height:40px;position:relative;}
-    h3{@extend %pos;width:180px;padding-left:20px;position:relative;
-        >i{position:absolute;left:105px;transform:rotate(180deg);}
-    }
-    .navSec{
+    .navfirst{
+        float:left;
         width:180px;
-        background-color: #fff;
-        %padding{padding:0px 10px 0px 20px;};
-        height:471px;
-        border:$border;
-        border-width:2px;
-        background-color: #fff;
-        z-index:5;
-        position:absolute;
-        top:39px;
-        left:32px;
-        >li{width:176px;height:73px;padding-top:10px;position:relative;border-top:1px solid #CBCBCB;
-            &:first-child{border-top:0 none;}
-            &:last-child{
-                height:176px;
-                div{line-height:30px;}
+        height:40px;
+        >li{
+            position:relative;
+            h3{@extend %pos;width:180px;padding-left:20px;position:relative;
+                >i{position:absolute;left:105px;transform:rotate(180deg);}
             }
-            &:hover{
-                s{display:none;}
-            }
-            >div{@extend %padding;height:30px;line-height:30px;}
-            >h4{@extend %padding;font-size:$listFont;line-height:$listFont;font-weight:bold;}
-            >a{margin:0px 4px;font-size:$listFont;line-height:30px;}
-            .hot{color:#FF6600;}
-            >i{color:#CBCBCB;position:absolute;left:6px;top:10px;transform:rotate(0deg);}
-            >s{position:absolute;color:#CBCBCB;right:12px;top:10px;}
-            .navThird{width:818px;
-                      height:490px;
-                      position:absolute;
-                      left:135px;
-                      top:0px;
-                      z-index:2;
-                      background:url('../img/kiddy.jpg') no-repeat;
-                      display:none;
-                .navLeft{margin:20px 10px;
-                    width:500px;
-                    >li{height:36px;padding-top:12px;
-                        h4{font-weight:bold;float:left;}
-                        ul{float:left;margin-left:8px;
-                            >li{height:12px;line-height:12px;padding:0 10px;border-right:1px solid #E2D5CC;color:#666666;
-                                &:last-child{border-right:0 none;}
+            .navSec{
+                width:180px;
+                background-color: #fff;
+                %padding{padding:0px 10px 0px 20px;};
+                height:471px;
+                border:$border;
+                border-width:2px;
+                background-color: #fff;
+                z-index:5;
+                position:absolute;
+                top:39px;
+                >li{width:176px;height:73px;padding-top:10px;position:relative;border-top:1px solid #CBCBCB;
+                    &:first-child{border-top:0 none;}
+                    &:last-child{
+                        height:176px;
+                        div{line-height:30px;}
+                    }
+                    &:hover{
+                        s{display:none;}
+                    }
+                    >div{@extend %padding;height:30px;line-height:30px;}
+                    >h4{@extend %padding;font-size:$listFont;line-height:$listFont;font-weight:bold;}
+                    >a{margin:0px 4px;font-size:$listFont;line-height:30px;}
+                    .hot{color:#FF6600;}
+                    >i{color:#CBCBCB;position:absolute;left:6px;top:10px;transform:rotate(0deg);}
+                    >s{position:absolute;color:#CBCBCB;right:12px;top:10px;}
+                    .navThird{width:818px;
+                              height:490px;
+                              position:absolute;
+                              left:135px;
+                              top:0px;
+                              z-index:2;
+                              background:url('../img/kiddy.jpg') no-repeat;
+                              display:none;
+                        .navLeft{margin:20px 10px;
+                            width:500px;
+                            >li{height:36px;padding-top:12px;
+                                h4{font-weight:bold;float:left;}
+                                ul{float:left;margin-left:8px;
+                                    >li{height:12px;line-height:12px;padding:0 10px;border-right:1px solid #E2D5CC;color:#666666;
+                                        &:last-child{border-right:0 none;}
+                                    }
+                                }
                             }
                         }
+                        .navRight{
+                            $borderList:1px solid #F2F2F2;
+                            width:205px;border-top:$borderList;border-left:$borderList;margin:0px 24px;
+                            li{float:left;border-right:$borderList;border-bottom:$borderList;
+                                a{float:left;width:100px;height:40px;background:url('../img/thinkpad.jpg') no-repeat 0 0;}
+                            }
+                        }
+                        >h2{width:205px;color:#484848;text-align:left;margin:20px 20px 6px 0px;font-size:$listFont;height:$listFont;line-height:$listFont;font-weight:bold;}
                     }
-                }
-                .navRight{
-                    $borderList:1px solid #F2F2F2;
-                    width:205px;border-top:$borderList;border-left:$borderList;margin:0px 24px;
-                    li{float:left;border-right:$borderList;border-bottom:$borderList;
-                        a{float:left;width:100px;height:40px;background:url('../img/thinkpad.jpg') no-repeat 0 0;}
-                    }
-                }
-                >h2{width:205px;color:#484848;text-align:left;margin:20px 20px 6px 0px;font-size:$listFont;height:$listFont;line-height:$listFont;font-weight:bold;}
-            }
 
+                }
+            }  
         }
-    }  
+    }
     li{float:left;}
     .navList>li{width:(627/7)+px;line-height:40px;color:#fff;text-align:center;font-size:$listFont;}
     .cartTips{
