@@ -1,0 +1,360 @@
+#header {
+  height: 136px;
+  padding: 20px 0px 30px;
+  background-color: #fff;
+  border: 0 none;
+}
+
+#header .container {
+  padding: 0px 150px 0px 160px;
+}
+
+#header .container h1 a {
+  float: left;
+  width: 318px;
+  height: 65px;
+  text-indent: -10000;
+  background: url("../img/logocn_1213.png") no-repeat 0 0;
+}
+
+#header .container .headR {
+  height: 65px;
+  padding-top: 10px;
+}
+
+#header .container .headR .userName {
+  height: 28px;
+  line-height: 28px;
+}
+
+#header .container .headR .userName a {
+  margin-top: 8px;
+  height: 12px;
+  line-height: 12px;
+  float: left;
+  padding: 0px 10px;
+  border-right: 1px solid #EDEDED;
+}
+
+#header .container .headR .userName a:nth-child(2) {
+  border-right: 0 none;
+}
+
+#header .container .headR .userName span {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  margin: 0px 10px;
+}
+
+#header .container .headR .userName img {
+  float: right;
+}
+
+#header .container .headR p:nth-child(2) {
+  height: 28px;
+  line-height: 28px;
+}
+
+#header .container .headR p:nth-child(2) a {
+  color: #1C459D;
+}
+
+#cartStep {
+  border-top: 1px solid #EDEDED;
+}
+
+#cartStep ul {
+  padding: 0px 286px;
+}
+
+#cartStep ul li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  margin: 0px 90px;
+  position: relative;
+}
+
+#cartStep ul li i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #FF8400;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #F59200;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#mainCart {
+  margin-top: 5px;
+}
+
+#mainCart .container {
+  width: 960px;
+  box-shadow: 0px 2px 5px #EDEDED;
+  border: 1px solid #EDEDED;
+}
+
+#mainCart .container h3 {
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid #EDEDED;
+  padding-left: 10px;
+}
+
+#mainCart .container h3 span {
+  float: right;
+  width: 176px;
+  text-align: left;
+  padding-left: 10px;
+  border-left: 1px solid #EDEDED;
+}
+
+#mainCart .container .cont {
+  border: 1px solid #EDEDED;
+  width: 960px;
+}
+
+#mainCart .container .cont .carCont {
+  width: 782px;
+  border-right: 1px solid #EDEDED;
+}
+
+#mainCart .container .cont .carCont table thead th {
+  height: 34px;
+  line-height: 34px;
+}
+
+#mainCart .container .cont .carCont table thead th:nth-child(1) {
+  padding-left: 10px;
+  width: 50px;
+}
+
+#mainCart .container .cont .carCont table thead th:nth-child(2) {
+  width: 368px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#mainCart .container .cont .carCont table thead th:nth-child(3) {
+  width: 88px;
+}
+
+#mainCart .container .cont .carCont table thead th:nth-child(4) {
+  width: 74px;
+}
+
+#mainCart .container .cont .carCont table thead th:nth-child(5) {
+  width: 94px;
+}
+
+#mainCart .container .cont .carCont table tbody {
+  padding-left: 10px;
+}
+
+#mainCart .container .cont .carCont table tbody tr {
+  border-bottom: 1px solid #EDEDED;
+  height: 100px;
+}
+
+#mainCart .container .cont .carCont table tbody tr:last-child {
+  border: 0 none;
+}
+
+#mainCart .container .cont .carCont table tbody tr td {
+  text-align: center;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(2) {
+  overflow: hidden;
+  text-align: left;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(2) img {
+  width: 80px;
+  height: 60px;
+  float: left;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(4) {
+  position: relative;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(4) input {
+  position: absolute;
+  display: block;
+  width: 38px;
+  height: 24px;
+  border: 1px solid #EDEDED;
+  text-align: center;
+  top: 34px;
+  left: 8px;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(4) em {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EDEDED;
+  line-height: 12px;
+  text-align: center;
+  top: 34px;
+  left: 50px;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(4) em:nth-child(2) {
+  top: 46px;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(4) span {
+  display: block;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  background-color: #FF8400;
+  color: #fff;
+  padding: 2px;
+}
+
+#mainCart .container .cont .carCont table tbody tr td:nth-child(6) a {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  color: #1C459D;
+}
+
+#mainCart .container .cont .allPrice {
+  width: 176px;
+  background-color: #FFFFCC;
+}
+
+#mainCart .container .cont .allPrice p {
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 10px;
+}
+
+#mainCart .container .cont .allPrice p span {
+  float: right;
+  color: #FF8400;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#mainCart .container .cont .allPrice p a {
+  color: #1C459D;
+}
+
+#mainCart .container .cont .allPrice button {
+  width: 154px;
+  height: 48px;
+  background-color: #FF8400;
+  color: #fff;
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
+  margin-left: 11px;
+  border-radius: 5px;
+}
+
+#mainCart .container .clearCart {
+  height: 176px;
+  line-height: 176px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #EDEDED;
+}
+
+#mainCart .container .clearCart a {
+  color: #1C459D;
+  margin: 0px 10px;
+}
+
+#otherGoods {
+  margin-top: 20px;
+}
+
+#otherGoods .container {
+  width: 960px;
+  border: 1px solid #EDEDED;
+  box-shadow: 0px 4px 5px #EDEDED;
+}
+
+#otherGoods .container > div {
+  height: 35px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+#otherGoods .container > div h3 {
+  width: 122px;
+  height: 35px;
+  line-height: 34px;
+  text-align: center;
+  color: #FF8400;
+  font-weight: bold;
+  border-bottom: 1px solid #FF8400;
+}
+
+#otherGoods .container ul {
+  padding: 27px 29px 0px;
+  overflow: hidden;
+}
+
+#otherGoods .container ul li {
+  width: 148px;
+  float: left;
+  margin: 0px 16px;
+}
+
+#otherGoods .container ul li img {
+  width: 147px;
+  height: 108px;
+}
+
+#otherGoods .container ul li p {
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  color: #666666;
+}
+
+#otherGoods .container ul li span {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+  color: #84984F;
+}
+
+#otherGoods .container ul li em {
+  display: block;
+  margin-top: 20px;
+  height: 28px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #FF8400;
+}
+
+#otherGoods .container ul li button {
+  display: block;
+  margin-top: 12px;
+  margin-left: 35px;
+  margin: 12px 0px 20px 35px;
+  width: 82px;
+  height: 26px;
+  border: 1px solid #EDEDED;
+  background-color: #fff;
+  text-align: center;
+  line-height: 26px;
+}

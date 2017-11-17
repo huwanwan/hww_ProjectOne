@@ -1,17 +1,46 @@
 //本模块依赖jquery
 
-define(['jquery'],function($){
+define(['jquery','conmon'],function($){
     return {
         header:function(){
             $('#header').load('http://localhost:9393/html/commonHtml.html .head',function(){
-                $(this).find('.orders').on('mouseenter','li',function(){
-                    $(this).find('div').css({
-                                            'display':'block',
-                                            'z-index':2
-                                        })
-                }).on('mouseleave','li',function(){
-                    $(this).find('div').css('display','none');
-                })
+                var userN = Cookies.get('user');
+                if(userN){
+                    var cont = `亲爱的用户<strong>${userN}</strong> <a href="javascript:;">安全退出</a>`;
+                    $('.login').addClass('hide').siblings('.userName').html(cont).removeClass('hide');
+                    $('.userName').find('a').click(function(){
+                        Cookies.remove('user','/');
+                        location.reload();
+                    })
+                    $(this).find('.orders').on('mouseenter','li',function(){
+                        $(this).find('.orderCont').css({
+                                                'display':'block',
+                                                'z-index':2
+                                            })
+                    }).on('mouseleave','li',function(){
+                        $(this).find('.orderCont').css('display','none');
+                    });
+                    $('.customer').on('mouseenter',function(){
+                        $(this).find('.phoneNum').css({
+                                                'display':'block',
+                                                'z-index':2
+                                            });
+                    }).on('mouseleave',function(){
+                        $(this).find('.phoneNum').css({
+                                                'display':'none'
+                                            });
+                    });
+                }else{
+                    $('.login').removeClass('hide').siblings('.userName').addClass('hide');
+                    $(this).find('.orders').on('mouseenter','li',function(){
+                        $(this).find('div').css({
+                                                'display':'block',
+                                                'z-index':2
+                                            })
+                    }).on('mouseleave','li',function(){
+                        $(this).find('div').css('display','none');
+                    })
+                }
             });
         },
         navTop:function(){
@@ -56,6 +85,13 @@ define(['jquery'],function($){
                 }).on('mouseleave','li',function(){
                     $(this).css({'backgroundColor':'','opacity':0.3}).stop().animate({'opacity':1});
                 })
+                var userN = Cookies.get('user');
+                if(userN){
+                   $('.cartTips').find('p').eq(1).html('您收藏的商品暂无动态提醒!');
+                }else{
+                    var cont = '请<a href="login.html">登录</a>后查看';
+                    $('.cartTips').find('p').eq(1).html(cont);
+                }
                 $('.cartTips').on('mouseenter','li',function(){
                     $(this).find('p').removeClass('hide');
 
@@ -88,7 +124,6 @@ define(['jquery'],function($){
                 })
                 $('.cartTips').on('mouseenter','li',function(){
                     $(this).find('p').removeClass('hide');
-
                 }).on('mouseleave','li',function(){
                     $(this).find('p').addClass('hide');
                 })

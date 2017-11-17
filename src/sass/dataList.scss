@@ -44,6 +44,24 @@ $border:1px solid #E2E2E2;
 #mainTips{
     height:39px;
     background-color: #F0F0F0;
+    opacity:1;
+    &.ceilBg{
+        position:fixed;
+        left:0;
+        top:0;
+        right:0;
+        opacity:0.2;
+        z-index:5;
+        background-color: rgb(96,105,130);
+        ul{
+            li{
+                color:#333;
+                &:not(.clickTips){
+                    color:#fff;
+                }
+            }
+        }    
+    }
     .container{
         ul{
             li{

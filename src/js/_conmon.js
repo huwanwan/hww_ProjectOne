@@ -205,39 +205,39 @@ var Cookies = {
 }
 
 // 解构版的获取cookie;
-var Cookies = {
-    set:function({name,val,expires,path}){
-        // 忽略参数顺序,自动匹配相同名字的参数值;
-        var res = name + '=' + val;
-        if(expires){
-            res+=';expires=' + expires.toUTCString();
-        }
-        if(path){
-            res+=';path='+path;
-        }
-        document.cookie = res;
-    },
-    remove:function({name,path}){
-        var now = new Date();
-        now.setDate(now.getDate() - 1);
-        Cookies.set({name,val:null,expires:now,path});
-    },
-    get:function({name}){
-        var res = '';
-        var allCookies = document.cookie;
-        if(!allCookies){
-            return res;
-        }
-        allCookies = allCookies.split(';');
-        allCookies.forEach(function(item){
-            var arr = item.split('=');
-            if(arr[0] === name){
-                res = arr[1];
-            }
-        })
-        return res;
-    }
-}
+// var Cookies = {
+//     set:function({name,val,expires,path}){
+//         // 忽略参数顺序,自动匹配相同名字的参数值;
+//         var res = name + '=' + val;
+//         if(expires){
+//             res+=';expires=' + expires.toUTCString();
+//         }
+//         if(path){
+//             res+=';path='+path;
+//         }
+//         document.cookie = res;
+//     },
+//     remove:function({name,path}){
+//         var now = new Date();
+//         now.setDate(now.getDate() - 1);
+//         Cookies.set({name,val:null,expires:now,path});
+//     },
+//     get:function({name}){
+//         var res = '';
+//         var allCookies = document.cookie;
+//         if(!allCookies){
+//             return res;
+//         }
+//         allCookies = allCookies.split(';');
+//         allCookies.forEach(function(item){
+//             var arr = item.split('=');
+//             if(arr[0] === name){
+//                 res = arr[1];
+//             }
+//         })
+//         return res;
+//     }
+// }
 
 
 //多属性值同时动画;

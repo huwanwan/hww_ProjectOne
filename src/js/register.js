@@ -41,13 +41,27 @@ requirejs(['config'],function(){
             inpMail:false
         }
         // 验证手机号码;
+        // 存下一个变量(手机号码,密码,邮箱),接收填写正确的手机号码,在step2的时候写入数据库;
+        var phone;
+        var psd;
+        var email;
+        // $.get(url,[data],[fn],[dataType]) // type:’get’
         $phone.blur(function(){
             var val = this.value;
             if(/^1[34578]{1}\d{9}$/.test(val)){
-                $(this).siblings('.glyphicon-ok-circle').removeClass('hide').siblings('.glyphicon-remove-sign').addClass('hide');
-                nextStep.inp1 = true;
+                $.get('../api/register.php',{'phone':val},(res)=>{
+                    if(res === "has"){
+                         $(this).siblings('.glyphicon-remove-sign').removeClass('hide').text('该手机已注册,请直接登录!').siblings('.glyphicon-ok-circle').addClass('hide');
+                         $phone.focus();
+                         nextStep.inp2 = false;
+                    }else{
+                        $(this).siblings('.glyphicon-ok-circle').removeClass('hide').siblings('.glyphicon-remove-sign').addClass('hide');
+                        phone = val;
+                        nextStep.inp1 = true;
+                    }
+                },'text')
             }else{
-                $(this).siblings('.glyphicon-remove-sign').removeClass('hide').siblings('.glyphicon-ok-circle').addClass('hide');
+                $(this).siblings('.glyphicon-remove-sign').removeClass('hide').text('请输入正确的手机号码!').siblings('.glyphicon-ok-circle').addClass('hide');
                 nextStep.inp2 = false;
             }  
             
@@ -68,14 +82,36 @@ requirejs(['config'],function(){
                 nextStep.inp2 = false;
             }
         })
-        $('button').click(function(){
+        $('.message').click(function(){
             if(nextStep.inp1 && nextStep.inp2){
-                $('.regStep').children('img').css({
-                    top:-75,
-                    left:0
-                });
-                $('.regCont').children('.step1').addClass('hide').siblings('.step2').removeClass('hide');
+                $(this).addClass('hide').siblings('.mail').removeClass('hide');
+                $('.mail').find('.glyphicon-remove-sign').text('已发送一条动态验证码短信，请查收。').removeClass('hide');
+                $('.mail').siblings('.next').removeClass('hide').click(into);
+                function into(){
+                    var val = $('#mailCode')[0].value;
+                    if(/^\d{6}$/.test(val)){
+                        $('.regStep').children('img').css({
+                            top:-75,
+                            left:0
+                        });
+                        $('.regCont').children('.step1').addClass('hide').siblings('.step2').removeClass('hide');
+                    }else{
+                        $('.mail').find('span').removeClass('hide').click(function(){
+                           $('.mail').find('.glyphicon-remove-sign').text('已发送一条动态验证码短信，请查收。').removeClass('hide');
+                            $(this).addClass('hide');
+                        });
+                        $('.mail').find('.glyphicon-remove-sign').text('输入码有误!').removeClass('hide');
+
+                        return false;
+                    }
+                }
+                
             }else{
+                if(!nextStep.inp1){
+                    $phone[0].focus();
+                }else{
+                    $code[0].focus();
+                }
                 return false;
             }
         })
@@ -86,19 +122,18 @@ requirejs(['config'],function(){
             if((/^\d{8,16}|[a-z]{8,16}$/i).test(val)){
                 $('.padLen').removeClass('hide').css({
                     'width':30,
-                    'background':'green'
+                    'background':'#f02'
                 }).siblings('.pos').addClass('hide');
             }else if((/^[0-9a-z]{8,}[\.\/\,\$]{2,}$/i).test(val) && val.length<=16){
-                console.log(val)
                 $('.padLen').removeClass('hide').css({
                     'width':90,
-                    'background':'#F55B17'
+                    'background':'#58bc58'
                 }).siblings('.pos').addClass('hide');
 
             }else if((/^[0-9a-z]{8,}$|^[0-9a-z]{7,}[\.\/\,\$]+$/i).test(val) && val.length<=16){
                 $('.padLen').removeClass('hide').css({
                     'width':60,
-                    'background':'#765283'
+                    'background':'#ccc'
                 }).siblings('.pos').addClass('hide');
             }else{
                 $('.padLen').addClass('hide').siblings('.pos').removeClass('hide');
@@ -114,17 +149,28 @@ requirejs(['config'],function(){
             }else{
                 $(this).siblings('.glyphicon-ok-circle').removeClass('hide').siblings('.pos').addClass('hide');
                 nextStep.inp2 = true;
+                psd = val;
             }
         })
-        $('button').click(function(){
+        $('.reg').click(function(){
             var check = $('.check').find('input')[0].checked;
             if(nextStep.inp1 && nextStep.inp2 && check){
-                $('.regStep').children('img').css({
-                    top:-150,
-                    left:0
-                });
-                $('.regCont').children('.step2').addClass('hide').siblings('.step3').removeClass('hide');
+                $.get('../api/register.php',{
+                    'phone':phone,
+                    'password':psd
+                },function(res){
+                     if(res === 'ok'){  
+                        $('.regStep').children('img').css({
+                            top:-150,
+                            left:0
+                        });
+                        $('.regCont').children('.step2').addClass('hide').siblings('.step3').removeClass('hide');
+                     }else{
+                        $(this).siblings('.pos').removeClass('hide').siblings('.glyphicon-ok-circle').addClass('hide');
+                     }             
+                })
             }else{
+                $('.check').removeClass('hide');
                 return false;
             }
         })
@@ -133,11 +179,24 @@ requirejs(['config'],function(){
             var val = this.value;
             var reg = /^[a-z0-9][\w]{2,}\@[0-9a-z]{2,}(\.[a-z]{2,})+$/;
             if(reg.test(val)){
-                $(this).siblings('.glyphicon-ok-circle').removeClass('hide').siblings('.glyphicon-remove-sign').addClass('hide');
+                email = val;
                 nextStep.inpMail = true;
             }else{
                 nextStep.inpMail = false;
                 $(this).siblings('.glyphicon-ok-circle').addClass('hide').siblings('.glyphicon-remove-sign').removeClass('hide');
+            }
+        })
+        $('.setMail').click(function(){
+            if(nextStep.inpMail){
+                $.get('../api/register.php',{
+                    'phone':phone,
+                    'email':email
+                },function(res){
+                    if(res === 'ok'){
+                        $(this).siblings('.glyphicon-ok-circle').removeClass('hide').siblings('.glyphicon-remove-sign').addClass('hide');
+                        location.href = '../index.html';
+                    }
+                })
             }
         })
 

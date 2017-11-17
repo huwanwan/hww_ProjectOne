@@ -105,6 +105,7 @@ ul, ol {
 
 input {
   padding-top: 0;
+  outline: none;
   padding-bottom: 0;
   font-family: "SimSun","宋体";
 }
@@ -181,6 +182,21 @@ a, i, s, em {
 
 #header .aside li a, #userHead .aside li a {
   margin-left: 7px;
+}
+
+#header .rightList p, #userHead .rightList p {
+  height: 24px;
+  line-height: 24px;
+  margin: 0px 20px;
+}
+
+#header .rightList p strong, #userHead .rightList p strong {
+  margin: 1px 2px;
+  color: #333;
+}
+
+#header .rightList p a, #userHead .rightList p a {
+  color: blue;
 }
 
 #header .rightList .login li, #userHead .rightList .login li {
@@ -299,11 +315,14 @@ a, i, s, em {
 }
 
 #navTop h1 {
-  width: 319px;
+  margin: 10px 80px 0px -12px;
+}
+
+#navTop h1 a {
+  float: left;
+  width: 318px;
   height: 65px;
-  margin: 10px 46px 0px 0px;
-  text-indent: -10000px;
-  background: url("../img/logocn_1213.png") no-repeat;
+  background: url("../img/logocn_1213.png") no-repeat 0 0;
 }
 
 #navTop .searchBox {
@@ -423,6 +442,10 @@ a, i, s, em {
   line-height: 30px;
 }
 
+#navBtm .navfirst > li .navSec > li:hover {
+  box-shadow: 0px 4px 5px #EDEDED;
+}
+
 #navBtm .navfirst > li .navSec > li:hover s {
   display: none;
 }
@@ -472,6 +495,7 @@ a, i, s, em {
   z-index: 2;
   background: url("../img/kiddy.jpg") no-repeat;
   display: none;
+  box-shadow: 0px 4px 5px #EDEDED;
 }
 
 #navBtm .navfirst > li .navSec > li .navThird .navLeft {
@@ -595,7 +619,8 @@ a, i, s, em {
   right: -1px;
 }
 
-#navBtm .cartTips li:last-child p button {
+#navBtm .cartTips li:last-child p a {
+  display: inline-block;
   width: 46px;
   height: 24px;
   line-height: 24px;

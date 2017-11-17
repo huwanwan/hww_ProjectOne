@@ -1,0 +1,320 @@
+$border:1px solid #EDEDED;
+$Color:#FF8400;
+// 头部;
+
+#header{
+    height:136px;
+    padding:20px 0px 30px;
+    background-color: #fff;
+    border:0 none;
+    .container{
+        padding:0px 150px 0px 160px;
+        h1{
+            a{
+                float:left;
+                width:318px;
+                height:65px;
+                text-indent:-10000;
+                background:url('../img/logocn_1213.png') no-repeat 0 0;
+            }
+        }
+        .headR{
+            height:65px;
+            padding-top:10px;
+            .userName{
+                height:28px;
+                line-height:28px;
+                a{
+                    margin-top:8px;
+                    height:12px;
+                    line-height:12px;
+                    float:left;
+                    padding: 0px 10px;
+                    border-right:$border;
+                    &:nth-child(2){
+                        border-right:0 none;
+                    }
+                }
+                span{
+                    float:left;
+                    height:28px;
+                    line-height:28px;
+                    margin:0px 10px;
+                }
+                img{
+                    float:right;
+                }
+            }
+            p:nth-child(2){
+                height:28px;
+                line-height:28px;
+                a{
+                    color:#1C459D;
+                }
+            }
+        }
+    }
+}
+#cartStep{
+    border-top:$border;
+    ul{
+        padding:0px 286px;
+        li{
+            float:left;
+            height:60px;
+            line-height:60px;
+            margin:0px 90px;
+            position:relative;
+            i{
+                display:block;
+                width:10px;
+                height:10px;
+                background-color: $Color;
+                border-radius:50%;
+                box-shadow: 0px 0px 5px #F59200;
+                position:absolute;
+                top:-5px;
+                left:50%;
+                transform:translateX(-50%)
+            }
+        }
+    }
+}
+#mainCart{
+    margin-top:5px;
+    .container{
+        width:960px;
+        box-shadow: 0px 2px 5px #EDEDED;
+        border:$border;
+        h3{
+            height:32px;
+            line-height:32px;
+            font-weight:bold;
+            border-bottom:$border;
+            padding-left:10px;
+            span{
+                float:right;
+                width:176px;
+                text-align:left;
+                padding-left:10px;
+                border-left:$border;
+            }
+        }
+        .cont{
+            border:$border;
+            width:960px;
+            
+            .carCont{
+                width:782px;
+                border-right:$border;
+                
+                table{
+                    thead{
+                        th{
+                            height:34px;
+                            line-height:34px;
+                            &:nth-child(1){
+
+                                padding-left:10px;
+                                width:50px;
+
+                            }
+                            &:nth-child(2){
+                                width:368px;
+                                text-align:left;
+                                padding-left:10px;
+                            }
+                            &:nth-child(3){
+                                width:88px;
+                            }
+                            &:nth-child(4){
+                                width:74px;
+                            }
+                            &:nth-child(5){
+                                width:94px;
+                            }
+                        }
+                    }
+                    tbody{
+                        padding-left:10px;
+                        tr{
+                            border-bottom:$border;
+                            height:100px;
+                            &:last-child{
+                                border:0 none;
+                            }
+                            td{
+                                text-align:center;
+                                &:nth-child(2){
+                                    overflow:hidden;
+                                    text-align:left;
+                                    img{
+                                        width:80px;
+                                        height:60px;
+                                        float:left;
+                                    }
+                                    a:hover{
+                                        text-decoration:underline;
+                                    }
+                                }
+                                &:nth-child(4){
+                                    position:relative;
+                                    input{
+                                        position:absolute;
+                                        display:block;
+                                        width:38px;
+                                        height:24px;
+                                        border:$border;
+                                        text-align:center;
+                                        top:34px;
+                                        left:8px;
+                                    }
+                                    em{
+                                        position:absolute;
+                                        display:block;
+                                        width:12px;
+                                        height:12px;
+                                        border:$border;
+                                        line-height:12px;
+                                        text-align:center;
+                                        top:34px;
+                                        left:50px;
+                                        &:nth-child(2){
+                                            top:46px;
+                                        }
+                                    }
+                                    span{
+                                        display:block;
+                                        height:20px;
+                                        position:absolute;
+                                        bottom:10px;
+                                        left:8px;
+                                        background-color: $Color;
+                                        color:#fff;
+                                        padding:2px;
+                                    }
+                                }
+                                &:nth-child(6){
+                                    a{
+                                        display:block;
+                                        height:16px;
+                                        line-height:16px;
+                                        color:#1C459D;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .allPrice{
+                width:176px;
+                background-color: #FFFFCC;
+                p{
+                    height:32px;
+                    line-height:32px;
+                    padding:0px 10px;
+                    span{
+                        float:right;
+                        color:$Color;
+                        font-size:14px;
+                        font-weight:bold;
+                    }
+                    a{
+                        color:#1C459D;
+                    }
+                }
+                button{
+                    width:154px;
+                    height:48px;
+                    background-color: $Color;
+                    color:#fff;
+                    font-size:16px;
+                    line-height:48px;
+                    text-align:center;
+                    margin-left:11px;
+                    border-radius:5px;
+                }
+            }
+        }
+        .clearCart{
+            height:176px;
+            line-height:176px;
+            width:100%;
+            text-align:center;
+            border:$border;
+            a{
+                color:#1C459D;
+                margin:0px 10px;
+            }
+        }
+    }
+}
+#otherGoods{
+    margin-top:20px;
+    .container{
+        width:960px;
+        border:$border;
+        box-shadow: 0px 4px 5px #EDEDED;
+        >div{
+            height:35px;
+            border-bottom:$border;
+            h3{
+               width:122px;
+               height:35px;
+               line-height:34px;
+               text-align:center;
+               color:$Color;
+               font-weight:bold;
+               border-bottom: 1px solid $Color;  
+            }
+
+        }
+        ul{
+            padding:27px 29px 0px;
+            overflow:hidden;
+            li{
+                width:148px;
+                float:left;
+                margin:0px 16px;
+                img{
+                    width:147px;
+                    height:108px;
+                }
+                p{
+                    height:36px;
+                    line-height:18px;
+                    overflow:hidden;
+                    color:#666666;
+                }
+                span{
+                    display:block;
+                    height:14px;
+                    line-height:14px;
+                    overflow:hidden;
+                    color:#84984F;
+                }
+                em{
+                    display:block;
+                    margin-top:20px;
+                    height:28px;
+                    line-height:28px;
+                    font-weight:bold;
+                    color:$Color;
+                }
+                button{
+                    display:block;
+                    margin-top:12px;
+                    margin-left:35px;
+                    margin:12px 0px 20px 35px;
+                    width:82px;
+                    height:26px;
+                    border:$border;
+                    background-color: #fff;
+                    text-align:center;
+                    line-height:26px; 
+                }
+            }
+        }
+    }
+}

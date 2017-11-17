@@ -50,6 +50,25 @@
 #mainTips {
   height: 39px;
   background-color: #F0F0F0;
+  opacity: 1;
+}
+
+#mainTips.ceilBg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: 5;
+  background-color: #606982;
+}
+
+#mainTips.ceilBg ul li {
+  color: #333;
+}
+
+#mainTips.ceilBg ul li:not(.clickTips) {
+  color: #fff;
 }
 
 #mainTips .container ul li {

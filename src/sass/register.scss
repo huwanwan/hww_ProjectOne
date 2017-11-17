@@ -93,6 +93,11 @@ $border:1px solid #CFCFCF;
                     } 
                     &.mail{
                         >span{
+                            float:left;
+                            height:30px;
+                            letter-spacing:-1px;
+                            font-size:12px;
+                            line-height:30px;
                             border:$border;
                             margin-left:2px;
                             text-align:center;
