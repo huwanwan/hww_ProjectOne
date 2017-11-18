@@ -87,6 +87,7 @@ $border:1px solid #DBDBDB;
         }
         .hotList{
             margin:10px 0px;
+            border:$border;
             h3{
                 height:30px;
                 line-height:30px;
@@ -105,9 +106,13 @@ $border:1px solid #DBDBDB;
                     margin-right:10px;
                 }
                 p{
+                    strong{
+                        margin-right:2px;
+                    }
                     padding-left:6px;
-                    line-height:18px;
-
+                    height:34px;
+                    line-height:17px;
+                    overflow:hidden;
                 }
                 span{
                     font-weight:bold;
@@ -225,6 +230,7 @@ $border:1px solid #DBDBDB;
                         }
                         .otherPrice{
                             input{
+                                text-align:center;
                                 height:25px;
                                 width:44px;
                                 border:$border;
@@ -356,6 +362,14 @@ $border:1px solid #DBDBDB;
         }
         .goods{
             padding-top:40px;
+            .noGoods{
+                height:30px;
+                line-height:30px;
+                font-size:12px;
+                position:absolute;
+                top:120%;
+                left:50%;
+            }
             ul{
                 overflow:hidden;
                 height:1464px;
@@ -386,7 +400,8 @@ $border:1px solid #DBDBDB;
                     }
                     
                     .cont{
-                        height:32px;
+                        height:34px;
+                        overflow:hidden;
                         a{
                             color:#666666;
                             line-height:16px;
@@ -458,6 +473,10 @@ $border:1px solid #DBDBDB;
                     &:last-child{
                         background-color: #ccc;
                     }
+                }
+                s{
+                    display:inline-block;
+                    margin:0px 5px;
                 }
                 input{
                     width:60px;

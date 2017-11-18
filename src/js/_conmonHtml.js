@@ -51,28 +51,18 @@ define(['jquery','conmon'],function($){
                     $(this).attr('placeHolder','请输入您想要搜索的关键字');
                 })
                 $(this).find('button').click(function(){
-                    // http://www.newegg.cn/Search.aspx?keyword=%u624B%u673A
-                    // $.ajax(settings)
-
-                    // type:请求类型，默认GET
-                    // url:数据请求地址（API地址）
-                    // data:发送到服务器的数据对象，格式：{Key:value}。
-                    // success:请求成功时回调函数。
-                    // dataType:设定返回数据的格式，json, jsonp, text(默认), html, xml, script
-                    // async：是否为异步请求，默认true
                     var val = $(this).prev('.search')[0].value;
                     if($.trim(val) === ''){
                         return;
-                    }
-                    $.ajax({
-                            'type':'post',
-                            'url':'http://www.newegg.cn/Search.aspx?keyword=',
-                            'data':{'keyword':val},
-                            success:function(res){
-                                console.log(res);
-                            },
-                            'dataType':'html'
-                    })
+                    }else{
+                        Cookies.set('word',val,null,'/');
+                        location.href = '../html/goodslist.html';
+                    }  
+                })
+                $(this).find('a').click(function(){
+                    var word = $(this).text();
+                    Cookies.set('word',word,null,'/');
+                    location.href = '../html/goodslist.html';
                 })
             });
         },
@@ -111,6 +101,11 @@ define(['jquery','conmon'],function($){
                                                         'top':0  
                                                     });
             
+                })     
+                $(this).find('a').click(function(){
+                    var word = $(this).text();
+                    Cookies.set('word',word,null,'/');
+                    location.href = '../html/goodslist.html';
                 })
             });
         },
@@ -183,14 +178,3 @@ define(['jquery','conmon'],function($){
         }
     }
 })
-// requirejs(['config'],function(){
-//     requirejs(['jquery'],function($){
-//         // load(url,[data],[callback]) 载入远程 HTML 文件代码并插入页面中。
-        
-        
-        
-        
-        
-        
-//     })
-// });

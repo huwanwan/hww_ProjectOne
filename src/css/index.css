@@ -34,6 +34,7 @@
 }
 
 #main .container .mainCont1 .countGoods .count span i {
+  padding: 0px 0px;
   color: #333;
   background-color: #ccc;
 }
@@ -67,6 +68,7 @@
   height: 36px;
   font-size: 12px;
   line-height: 18px;
+  overflow: hidden;
 }
 
 #main .container .mainCont1 .countGoods .countBox ul li span {
@@ -200,6 +202,7 @@
   height: 48px;
   font-size: 12px;
   line-height: 20px;
+  overflow: hidden;
 }
 
 #main .container .mainCont3 .hotBox ul li span {
