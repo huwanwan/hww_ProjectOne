@@ -158,7 +158,7 @@ s, i, em {
   text-decoration: none;
 }
 
-a, i, s, em {
+a, i, s, em, button {
   cursor: pointer;
 }
 

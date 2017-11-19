@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-09 16:22:57
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 19:50:28
+* @Last Modified time: 2017-11-19 12:57:29
 */
 
 ;(function($){
@@ -17,31 +17,28 @@
            var $self = $(this);
            var Zoom = {
                 init:function(){
-                    this.$smallPic = $('<div/>').addClass('smallPic').css({
-                        width:opt.bWidth,
-                        height:opt.bHeight
-                    });
-                    var sImg = $('<img/>').css({
-                                            'width':opt.bWidth,
-                                            'height':opt.bHeight
-                                          }).attr('src',opt.src).appendTo(this.$smallPic);
-                    this.$bigP = $('<div/>').addClass('bigPic').css({
+                    this.$smallPic = $(opt.boxPic);
+                    var sImg = $(opt.smPic);
+                    this.$bigP = $('<div/>').addClass('bigPic hide').css({
                                                                     'width':opt.swidth,
                                                                     'height':opt.sheight
-                                                                }).hide();
-                    $self.append([this.$bigP,this.$smallPic]);              
+                                                                });
+                    $self.append(this.$bigP);         
                     this.$smallPic.on('mouseenter',function(){
+
                         this.show();
-                    }.bind(this)).on('mouseleave',function(){
+                    }.bind(this));
+                    this.$smallPic.on('mouseleave',function(){
                         this.hide();
-                    }.bind(this)).on('mousemove',function(ev){
+                    }.bind(this));
+                    this.$smallPic.on('mousemove',function(ev){
                         this.move(ev.clientX,ev.clientY);
                     }.bind(this));
 
                 },
                 show:function(){
                     this.$bigImg = $('<img/>').addClass('bigImg').attr('src',opt.bigPic).appendTo(this.$bigP);
-                    this.$bigP.show();
+                    this.$bigP.removeClass('hide');
                     this.$zoom = $('<div/>').addClass('floatBox');
                     this.$smallPic.append(this.$zoom);
                     this.$bigImg[0].onload = function(){
@@ -50,10 +47,11 @@
                             'width':opt.swidth/this.ratio,
                             'height':opt.sheight/this.ratio
                         });
-                        var setLeft = this.$smallPic.position().left + this.$smallPic.outerWidth()+ opt.gap;
+                        var setLeft = this.$smallPic.offset().left + this.$smallPic.width()+ opt.gap;
                         this.$bigP.css({
                             'left' : setLeft,
-                            'top' : this.$smallPic.position().top 
+                            'top':0,
+                            'z-index':6
                         })
                     }.bind(this);
 
@@ -61,7 +59,7 @@
                 hide:function(){
                     this.$zoom.remove();
                     this.$bigImg.remove();
-                    this.$bigP.hide();
+                    this.$bigP.remove();
                 },
                 move:function(x,y){
                     var left = x - this.$smallPic.offset().left - this.$zoom.outerWidth()/2;

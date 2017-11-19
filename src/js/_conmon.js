@@ -197,7 +197,7 @@ var Cookies = {
             var arr = item.split('=');
             if(arr[0] === name){
                 // 返回找到的名字对应值;
-                res = decodeURI(arr[1]);
+                res = arr[1]
             }
         })
         return res;

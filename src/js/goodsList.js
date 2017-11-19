@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-15 13:47:18
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 22:17:23
+* @Last Modified time: 2017-11-19 14:39:28
 */
 requirejs(['config'],function(){
     requirejs(['jquery','comHtmljs'],function($,m){
@@ -14,6 +14,7 @@ requirejs(['config'],function(){
         // main部分商品生成;
         var word = Cookies.get('word');
         if(word != ''){
+            $('#contTips').find('span').text(word);
             $.get('../api/goodsList.php',{'word':word},function(res){
                 
                 if(res.total === 0){
@@ -110,25 +111,7 @@ requirejs(['config'],function(){
                                 $(this).addClass('hide').siblings('input').addClass('hide').siblings('.write').removeClass('hide');
                             }
                         })
-                        // 点击比较飞入ul;
-                         // 比较加入购物车;
-        
-                        $('.fairly').click(function(){
-                            console.log(this)
-                            self.goFilter(this);
-                        })
-                        $('.clearAll').click(function(){
-                            self.clearGoods();
-                        })
-                        $(window).scroll(function(){
-                            var top = $(window).scrollTop();
-                            var isImg = $('.contrastGoods').children('ul').find('img').length;
-                            if(top > self.maxTop && isImg > 0){
-                                $('.contrastGoods').addClass('scrollT').find('img').css('position','static');
-                            }else{
-                                $('.contrastGoods').removeClass('scrollT').find('img');
-                            }
-                        })
+                       
                         // 点击品牌筛选;
                         $('.filter1').find('a').click(function(){
                             var word = $(this).text();
@@ -174,6 +157,7 @@ requirejs(['config'],function(){
                             console.log(val)
                             self.getDefault(word,val);
                         })
+                    
                     },
                     view(word,type){
                         // 重新请求数据;
@@ -255,7 +239,7 @@ requirejs(['config'],function(){
                         }
                         var cont = this.opt.map((item)=>{
                                 return `<li data-id=${item.id}>
-                                        <img src="${item.imgUrl}" alt="" />
+                                    <a><img class="goodsImg" src="${item.imgUrl}" alt="" /></a>
                                         <p class="cont">
                                             <a>${item.details}</a>
                                         </p>
@@ -268,7 +252,7 @@ requirejs(['config'],function(){
                                             ￥${item.nPrice}
                                         </p>
                                         <p class="click">
-                                            <a class="buy" href="../html/cart.html">购买</a>
+                                            <a class="buy" href="javascript:;">购买</a>
                                             <a class="collect" href="javascript:;">收藏</a>
                                             <a class="fairly" href="javascript:;">比较</a>
                                         </p>
@@ -290,7 +274,9 @@ requirejs(['config'],function(){
                         var self = this;
                         this.cartList = [];
                         if(Cookies.get('cart')){
-                            this.cartList.push(Cookies.get('cart'));
+                            this.cartList = JSON.parse(Cookies.get('cart'));
+                        }else{
+                            this.cartList = [];
                         }
                         $('li').find('a').click(function(){
                             if($(this).parents('.click')){
@@ -300,21 +286,66 @@ requirejs(['config'],function(){
                             self.setCookie(dataId);
                            
                         });
+                        // 文字或图片跳到详情页;
+                        $('.goods').children('ul').find('.cont').find('a').click(function(){
+                            var dataId = $(this).parents('li').attr('data-id');
+                            self.setCookie(dataId);
+                        });
+                        $('.goods').find('li').children('a').click(function(){
+                            var dataId = $(this).parents('li').attr('data-id');
+                            self.setCookie(dataId);
+                        })
                         $('.buy').click(function(){
                             var dataId = $(this).parents('li').attr('data-id');
                             self.setCart(dataId);
                         })
+                         // 点击比较飞入ul;
+                         // 比较加入购物车;
+        
+                        $('.fairly').click(function(){
+                            var ele = $(this).parents('li');
+                            self.goFilter(this);
+                        })
+                        $('.clearAll').click(function(){
+                            self.clearGoods();
+                        })
+                        $(window).scroll(function(){
+                            var top = $(window).scrollTop();
+                            var isImg = $('.contrastGoods').children('ul').find('img').length;
+                            if(top > self.maxTop && isImg > 0){
+                                $('.contrastGoods').addClass('scrollT').find('img').css('position','static');
+                            }else{
+                                $('.contrastGoods').removeClass('scrollT').find('img');
+                            }
+                        })
                     },
                     setCookie(dataId){
                         $.get('../api/goods.php',{'id':dataId},function(res){
+                            res = JSON.stringify(res);
                             Cookies.set('goods',res,null,'/');
                             location.href = '../html/dataList.html';
                         },'json')
                     }, 
                     setCart(dataId){
-                        $.get('../api/goods.php',{'id':dataId},(res)=>{
-                            this.cartList.push(res);
-                            Cookies.set('cart',this.cartList,null,'/');
+                        $.get('../api/goods.php',{'id':dataId},(res)=>{  
+                            if(Cookies.get('cart')){
+                                this.cartList = JSON.parse(Cookies.get('cart'));
+                            }else{
+                                this.cartList =[];
+                            }
+                            res[0].qty = 1;
+                            var getId = true;
+                            for(var i = 0; i <this.cartList.length;i++){
+                                if(this.cartList[i].id == res[0].id){
+                                    this.cartList[i].qty += res[0].qty;
+                                    getId = false;
+                                    return;
+                                }
+                            }
+                            if(getId){
+                                this.cartList.push(res[0]);
+                            }   
+                            Cookies.set('cart',JSON.stringify(this.cartList),null,'/');
                             location.href = '../html/cart.html';
                         },'json');
                     },
@@ -339,7 +370,7 @@ requirejs(['config'],function(){
                             },'json');
                         }
                     },
-                    goFilter(ele){            
+                    goFilter(ele){         
                         if(this.Maxidx >= this.ulLen){
                             alert(`每次最多只能选择$(len)种商品进行比较!`);
                         }
@@ -351,9 +382,9 @@ requirejs(['config'],function(){
                         }
                         $(ele).css('border-color','#F7661F').attr('onOff','on');
                         var maxLeft = $('.contrastGoods').children('ul').children('li').eq(this.Maxidx).offset().left;
-                        this.ulPos.left = $(ele).parents('li').children('img').position().left;
-                        this.ulPos.top = $(ele).parents('li').children('img').position().top;
-                        var $iCurImg = $(ele).parents('li').children('img');
+                        this.ulPos.left = $(ele).parents('li').find('.goodsImg').position().left;
+                        this.ulPos.top = $(ele).parents('li').find('.goodsImg').position().top;
+                        var $iCurImg = $(ele).parents('li').find('.goodsImg');
                         var $newPic = $iCurImg.clone().css({
                             'position':'absolute',
                             'width':$iCurImg.outerWidth(),
@@ -428,6 +459,7 @@ requirejs(['config'],function(){
                     $('.hotList').find('a').click(function(){
                         var dataId = $(this).parents('div').attr('data-id');
                         $.get('../api/goods.php',{'id':dataId},function(res){
+                            res = JSON.stringify(res);
                             Cookies.set('goods',res,null,'/');
                             location.href = '../html/dataList.html';
                         },'json')

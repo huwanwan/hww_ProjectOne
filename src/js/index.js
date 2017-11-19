@@ -3,7 +3,7 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 19:40:51
+* @Last Modified time: 2017-11-19 14:51:36
 */
 requirejs(['config'],function(){
     requirejs(['jquery','comHtmljs','carousel','conmon'],function($,m){
@@ -101,6 +101,7 @@ requirejs(['config'],function(){
             },
             setCookie(dataId){
                 $.get('../api/goods.php',{'id':dataId},function(res){
+                    res = JSON.stringify(res[0]);
                     Cookies.set('goods',res,null,'/');
                     location.href = 'html/dataList.html';
                 },'json')
@@ -297,10 +298,6 @@ requirejs(['config'],function(){
                 this.list.forEach((item,idx)=>{
                     this.hotgoods.push(Object.assign({},item,res[idx]));
                 })
-                this.cartList = [];
-                if(Cookies.get('cart')){
-                    this.cartList.push(Cookies.get('cart'));
-                }
                 this.$hotBox = $('<div/>').addClass('hotBox').appendTo($('.mainCont3'));
                 this.$hotList = $('<ul/>').addClass('clearfix').appendTo(this.$hotBox);
                 var data = this.hotgoods.map(item=>{
@@ -336,14 +333,29 @@ requirejs(['config'],function(){
             },
             setCookie(dataId){
                 $.get('../api/goods.php',{'id':dataId},function(res){
-                    Cookies.set('goods',res,null,'/');
+                    Cookies.set('goods',JSON.stringify(res[0]),null,'/');
                     location.href = 'html/dataList.html';
                 },'json');
             },
             setCart(dataId){
-                $.get('../api/goods.php',{'id':dataId},(res)=>{
-                    this.cartList.push(res);
-                    Cookies.set('cart',this.cartList,null,'/');
+                $.get('../api/goods.php',{'id':dataId},(res)=>{  
+                    if(Cookies.get('cart')){
+                        this.cartList = JSON.parse(Cookies.get('cart'));
+                    }else{
+                        this.cartList =[];
+                    }
+                    res[0].qty = 1;
+                    var getId = true;
+                    for(var i = 0; i <this.cartList.length;i++){
+                        if(this.cartList[i].id === res[0].id){
+                            this.cartList[i].qty += res[0].qty;
+                            getId = false;
+                        }
+                    }
+                    if(getId){
+                        this.cartList.push(res[0]);
+                    }   
+                    Cookies.set('cart',JSON.stringify(this.cartList),null,'/');
                     location.href = 'html/cart.html';
                 },'json');
             },
@@ -658,6 +670,7 @@ requirejs(['config'],function(){
             },
             setCookie(dataId){
                 $.get('../api/goods.php',{'id':dataId},function(res){
+                    res = JSON.stringify(res[0]);
                     Cookies.set('goods',res,null,'/');
                     location.href = 'html/dataList.html';
                 },'json')
@@ -772,6 +785,7 @@ requirejs(['config'],function(){
                 },
                 setCookie(dataId){
                     $.get('../api/goods.php',{'id':dataId},function(res){
+                        res = JSON.stringify(res[0]);
                         Cookies.set('goods',res,null,'/');
                         location.href = 'html/dataList.html';
                     },'json')

@@ -3,13 +3,14 @@
 define(['jquery','conmon'],function($){
     return {
         header:function(){
-            $('#header').load('http://localhost:9393/html/commonHtml.html .head',function(){
+            $('#header').load('../html/commonHtml.html .head',function(){
                 var userN = Cookies.get('user');
                 if(userN){
                     var cont = `亲爱的用户<strong>${userN}</strong> <a href="javascript:;">安全退出</a>`;
                     $('.login').addClass('hide').siblings('.userName').html(cont).removeClass('hide');
                     $('.userName').find('a').click(function(){
                         Cookies.remove('user','/');
+                        Cookies.remove('cart','/');
                         location.reload();
                     })
                     $(this).find('.orders').on('mouseenter','li',function(){
@@ -44,7 +45,7 @@ define(['jquery','conmon'],function($){
             });
         },
         navTop:function(){
-            $('#navTop').load('http://localhost:9393/html/commonHtml.html .navT',function(){
+            $('#navTop').load('../html/commonHtml.html .navT',function(){
                 $(this).find('.search').focus(function(){
                     $(this).attr('placeHolder','');
                 }).blur(function(){
@@ -67,7 +68,7 @@ define(['jquery','conmon'],function($){
             });
         },
         navBtm:function(){
-             $('#navBtm').load('http://localhost:9393/html/commonHtml.html .navB',function(){
+             $('#navBtm').load('../html/commonHtml.html .navB',function(){
                 var timer;
                 $(this).find('.navSec').removeClass('hide');
                 $(this).find('.navList').on('mouseenter','li',function(){
@@ -76,8 +77,16 @@ define(['jquery','conmon'],function($){
                     $(this).css({'backgroundColor':'','opacity':0.3}).stop().animate({'opacity':1});
                 })
                 var userN = Cookies.get('user');
+                var cart = Cookies.get('cart');
+                var cartLen = 0;
+                if(cart){
+                    cart = JSON.parse(cart);
+                    cartLen = cart.length;
+                    console.log($('.cartTips').find('li').eq(0).find('s'))
+                     $('.cartTips').find('li').eq(0).find('s').text(cartLen).parents('span').siblings('p').text(`您的购物车内已有${cartLen}件商品!`);
+                }
                 if(userN){
-                   $('.cartTips').find('p').eq(1).html('您收藏的商品暂无动态提醒!');
+                  $('.cartTips').find('p').eq(1).html('您收藏的商品暂无动态提醒!');
                 }else{
                     var cont = '请<a href="login.html">登录</a>后查看';
                     $('.cartTips').find('p').eq(1).html(cont);
@@ -117,6 +126,13 @@ define(['jquery','conmon'],function($){
                 }).on('mouseleave','li',function(){
                     $(this).css({'backgroundColor':'','opacity':0.3}).stop().animate({'opacity':1});
                 })
+                var cart = Cookies.get('cart');
+                var cartLen = 0;
+                if(cart){
+                    cart = JSON.parse(cart);
+                    cartLen = cart.length;
+                     $('.cartTips').find('li').eq(0).find('s').text(cartLen).parents('span').siblings('p').text(`您的购物车内已有${cartLen}件商品!`);
+                }
                 $('.cartTips').on('mouseenter','li',function(){
                     $(this).find('p').removeClass('hide');
                 }).on('mouseleave','li',function(){
@@ -154,6 +170,11 @@ define(['jquery','conmon'],function($){
                     this.timer = setTimeout(()=>{
                         $(this).parents('.navSec').addClass('hide');
                     },500)
+                })
+                $(this).find('a').click(function(){
+                    var word = $(this).text();
+                    Cookies.set('word',word,null,'/');
+                    location.href = '../html/goodslist.html';
                 })
                 
             })

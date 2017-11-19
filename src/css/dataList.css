@@ -126,6 +126,8 @@
 }
 
 .goodsCont .contBox h2 {
+  width: 710px;
+  overflow: hidden;
   height: 32px;
   line-height: 32px;
   font-weight: bold;
