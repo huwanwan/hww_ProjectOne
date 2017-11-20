@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-14 14:32:48
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-17 21:22:51
+* @Last Modified time: 2017-11-20 09:23:06
 */
 
 requirejs(['config'],function(){
@@ -32,7 +32,7 @@ requirejs(['config'],function(){
                 pword = this.value;
                 $('.error').addClass('hide');
             }else{
-                $('.error').removeClass('hide').css('top',94).text('用户名和密码不符,请重新输入!');
+                $('.error').removeClass('hide').css({'top':94}).text('用户名和密码不符,请重新输入!');
                 pword = false; 
                 this.value = "";  
                 $('.username').focus();

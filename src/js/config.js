@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-14 19:00:25
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 19:01:09
+* @Last Modified time: 2017-11-20 13:10:12
 */
 requirejs.config({
     paths:{
@@ -11,7 +11,7 @@ requirejs.config({
         'carousel':'../lib/hwCarousel/hwCarousel',
         'conmon':'_conmon',
         'comHtmljs':'_conmonHtml',
-        'zoom':'../lib/hwZoom/hwzoom'
+        'zoom':'../lib/hwZoom/hwZoom'
     },
     shim:{
         'jqueryUI':['jquery'],

@@ -102,7 +102,6 @@
 }
 
 .goodsCont .ImgTab {
-  width: 490px;
   padding-top: 26px;
 }
 
@@ -125,8 +124,11 @@
   border: 1px solid #E2E2E2;
 }
 
+.goodsCont .contBox {
+  width: 680px;
+}
+
 .goodsCont .contBox h2 {
-  width: 710px;
   overflow: hidden;
   height: 32px;
   line-height: 32px;
@@ -271,7 +273,7 @@
 }
 
 .goodsCont .contBox .conRight {
-  width: 196px;
+  width: 167px;
   border-left: 1px solid #E2E2E2;
   height: 484px;
   padding-left: 8px;

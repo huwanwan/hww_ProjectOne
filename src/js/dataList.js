@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-16 16:15:40
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-19 15:54:04
+* @Last Modified time: 2017-11-20 13:42:57
 */
 
 requirejs(['config'],function(){
@@ -70,19 +70,20 @@ requirejs(['config'],function(){
                     // 页面下面的描述标题;
                     $('.listText').children('.goodsName').text(this.data.details);
                     var otherImg = this.data.otherImg.split(',');
+                    var $picBox = $('.picBox');
                     // 放大镜大图小图以及页面底部大图生成;
                     otherImg.forEach((item,idx)=>{
                         var mainPic = $('<img/>').attr('src',item).css({
-                            'display':'none',
                             'width':450,
                             'height':338
-                        }).appendTo('.picBox')
+                        }).appendTo($picBox);
                         var img = $('<img/>').attr('src',item).css({
                             'width':78,
                             'height':58
                         });
                         var bImg = $('<img/>').attr('src',item).css('margin-left',180).appendTo('.listText');
-                        this.$main.find('.sImg').children().eq(idx).append(img);
+                        var $li = $('<li/>').append(img);
+                        this.$main.find('.sImg').append($li);
                     })
                     // 初始化左边区域;
                     this.changeImg();
@@ -146,7 +147,6 @@ requirejs(['config'],function(){
                     // 大图移入放大镜;
                     $('.picBox').children('img').on('mouseenter',function(){
                         var src = $('.picBox').children('img').eq(self.idx).attr('src');
-                        console.log(this)
                         self.zoom(this,src);
                     })
                 },
@@ -190,7 +190,7 @@ requirejs(['config'],function(){
                         'width':40,
                         'height':40
                     },()=>{
-                        newImg[0].remove();
+                        $newImg.remove();
                     });
                     var cart = Cookies.get('cart');
                     if(cart){

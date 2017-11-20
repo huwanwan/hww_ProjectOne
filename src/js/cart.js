@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 09:58:57
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-19 17:10:44
+* @Last Modified time: 2017-11-20 13:53:31
 */
 
 requirejs(['config'],function(){
@@ -52,15 +52,16 @@ requirejs(['config'],function(){
                 // 数量加减;
                 this.lists.find('.sub').click(function(){
                     var qty = $(this).siblings('input')[0].value;
+                    var getId = $(this).parents('tr').attr('data-id');
                     qty--;
-                    self.changeQty(this,qty);
+                    self.changeQty(this,qty,getId);
                     self.allChecked();
                 });
                 this.lists.find('.add').click(function(){
                     var qty = $(this).siblings('input')[0].value;
-                    var price = $(this).parents('td').prev('td').text().substr(1);
+                    var getId = $(this).parents('tr').attr('data-id');
                     qty++;
-                    self.changeQty(this,qty);
+                    self.changeQty(this,qty,getId);
                     self.allChecked();
                 });
                 // 输入数量计算价格;
@@ -138,7 +139,7 @@ requirejs(['config'],function(){
                 }
                 $('.allPrice').find('span').text(this.countP);
             },
-            changeQty(ele,qty){
+            changeQty(ele,qty,getId){
                 if(qty<1){
                     qty = 1;
                 }
@@ -146,6 +147,12 @@ requirejs(['config'],function(){
                 var price = $(ele).parents('td').prev('td').text().substr(1);
                 $(ele).parents('tr').find('.count').text(`￥${(qty*price).toFixed(2)}`);
                 $(ele).siblings('input')[0].value = qty;
+                this.data.forEach((item)=>{
+                    if(item.id == getId){
+                        item.qty = qty;
+                    }
+                })
+                Cookies.set('cart',JSON.stringify(this.data),null,'/');
             }
         }
         car.init();

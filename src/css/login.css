@@ -1,4 +1,5 @@
 #userMain {
+  height: 485px;
   background-color: #E3E3E3;
 }
 
@@ -78,7 +79,6 @@
 }
 
 #userMain .container .loginArea .getMation .logInp span.error {
-  display: block;
   height: 20px;
   line-height: 20px;
   font-size: 14px;

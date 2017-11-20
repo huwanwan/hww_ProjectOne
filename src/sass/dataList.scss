@@ -1,4 +1,7 @@
 $border:1px solid #E2E2E2;
+html,body{
+    min-width:1266px;
+}
 // mainTitle部分;
 #mainTitle{
     background-color: #F0F0F0;
@@ -94,7 +97,6 @@ $border:1px solid #E2E2E2;
 .goodsCont{
     height:591px;
     .ImgTab{
-        width:490px;
         padding-top:26px;      
         .picBox{
             width:489px;
@@ -114,8 +116,8 @@ $border:1px solid #E2E2E2;
         }
     }
     .contBox{
+        width:680px;
         h2{  
-            width:710px;
             overflow:hidden;
             height:32px;
             line-height:32px;
@@ -248,7 +250,7 @@ $border:1px solid #E2E2E2;
             }
         }
         .conRight{
-            width:196px;
+            width:167px;
             border-left:$border;
             height:484px;
             padding-left:8px;

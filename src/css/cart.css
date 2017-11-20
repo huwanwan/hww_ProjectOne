@@ -95,6 +95,7 @@
 
 #mainCart .container {
   width: 960px;
+  padding: 0px;
   box-shadow: 0px 2px 5px #EDEDED;
   border: 1px solid #EDEDED;
 }
@@ -131,6 +132,7 @@
 }
 
 #mainCart .container .cont .carCont table thead th:nth-child(1) {
+  padding-top: 6px;
   padding-left: 10px;
   width: 50px;
 }
@@ -307,7 +309,7 @@
 }
 
 #otherGoods .container ul {
-  padding: 27px 29px 0px;
+  padding: 24px 14px 0px;
   overflow: hidden;
 }
 

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-09 16:22:57
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-19 12:57:29
+* @Last Modified time: 2017-11-20 13:23:24
 */
 
 ;(function($){
@@ -63,7 +63,11 @@
                 },
                 move:function(x,y){
                     var left = x - this.$smallPic.offset().left - this.$zoom.outerWidth()/2;
-                    var top = y - this.$smallPic.offset().top - this.$zoom.outerHeight()/2;
+                    if($(window).scrollTop() > 0){
+                    	var top = (y - this.$smallPic.offset().top - this.$zoom.outerHeight()/2) + $(window).scrollTop();
+                    }else{
+                   	 	var top = y - this.$smallPic.offset().top - this.$zoom.outerHeight()/2;
+                    }
                     if(left < 0){
                         left = 0;
                     }else if(left > this.$smallPic.outerWidth() - this.$zoom.outerWidth()){

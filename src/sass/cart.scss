@@ -84,6 +84,7 @@ $Color:#FF8400;
     margin-top:5px;
     .container{
         width:960px;
+        padding:0px;
         box-shadow: 0px 2px 5px #EDEDED;
         border:$border;
         h3{
@@ -114,7 +115,7 @@ $Color:#FF8400;
                             height:34px;
                             line-height:34px;
                             &:nth-child(1){
-
+                                padding-top:6px;
                                 padding-left:10px;
                                 width:50px;
 
@@ -271,7 +272,7 @@ $Color:#FF8400;
 
         }
         ul{
-            padding:27px 29px 0px;
+            padding:24px 14px 0px;
             overflow:hidden;
             li{
                 width:148px;

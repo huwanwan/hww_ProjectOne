@@ -3,7 +3,7 @@
 * @Author: Marte
 * @Date:   2017-11-10 16:54:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-19 14:51:36
+* @Last Modified time: 2017-11-20 11:06:32
 */
 requirejs(['config'],function(){
     requirejs(['jquery','comHtmljs','carousel','conmon'],function($,m){
@@ -96,7 +96,7 @@ requirejs(['config'],function(){
                 var self = this;
                 this.$countList.find('a').click(function(){
                     var dataId = $(this).parents('li').attr('data-id');
-                    self = setCookie(dataId);
+                    self.setCookie(dataId);
                 }) 
             },
             setCookie(dataId){
